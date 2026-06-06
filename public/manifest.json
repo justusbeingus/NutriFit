@@ -1,0 +1,22 @@
+{
+  "short_name": "NutriFast",
+  "name": "NutriFast - Clean Nutrition Tracker",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f9f9ff",
+  "theme_color": "#006e2f",
+  "display": "standalone",
+  "orientation": "portrait"
+}

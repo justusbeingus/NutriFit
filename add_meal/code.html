@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFast - Add Meal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+                    "inverse-surface": "#2a313d",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-container": "#fea619",
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-dim": "#d3daea",
+                    "on-secondary-fixed": "#2a1700",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#dce2f3",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#860011",
+                    "primary-fixed-dim": "#4ae176",
+                    "surface-tint": "#006e2f",
+                    "surface-container-high": "#e2e8f8",
+                    "on-surface": "#151c27",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dce2f3",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-secondary-container": "#684000",
+                    "tertiary-container": "#ff8a83",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#6bff8f",
+                    "inverse-primary": "#4ae176",
+                    "tertiary": "#b91a24",
+                    "on-background": "#151c27",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "primary": "#006e2f",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-primary-container": "#004b1e",
+                    "secondary-fixed": "#ffddb8",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "secondary": "#855300",
+                    "outline": "#6d7b6c",
+                    "on-surface-variant": "#3d4a3d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "surface": "#f9f9ff",
+                    "outline-variant": "#bccbb9",
+                    "primary-container": "#22c55e",
+                    "on-tertiary-fixed": "#410004",
+                    "surface-container": "#e7eefe",
+                    "background": "#f9f9ff",
+                    "on-primary-fixed": "#002109",
+                    "error-container": "#ffdad6"
+            },
+            borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            spacing: {
+                    "lg": "24px",
+                    "xl": "32px",
+                    "touch-target": "44px",
+                    "md": "16px",
+                    "xs": "8px",
+                    "base": "4px",
+                    "sm": "12px",
+                    "container-padding": "16px"
+            },
+            fontFamily: {
+                    "headline-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-data": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            fontSize: {
+                    "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "display-data": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Fix input number arrows */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary/20 selection:text-primary pb-[100px] md:flex md:justify-center">
+<div class="w-full max-w-md bg-surface min-h-screen relative shadow-2xl">
+<!-- TopAppBar Shared Component -->
+<header class="flex justify-between items-center px-container-padding h-touch-target w-full bg-surface/80 docked full-width top-0 sticky backdrop-blur-md z-40 transition-all duration-200 flat no shadows">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A small, circular avatar image showing a stylized user profile placeholder. The background is a soft, light grey-blue container color, and the initials are rendered in a deep, crisp primary green. The overall aesthetic is clean, flat, and fits seamlessly into a clinical modern UI layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDevXOjuZnDaQklG_REOlc61Hu7D5d5z5P1aPdHRwegRyQEZWFvu0Fj9vNA60yMJbrjJGCoHlhFVvfGjUsQYkIrNDjI5kRmeVbhN0Mm9WeHSmwD-_JzBq0mH1f44snoQonfgAbe_MmNkhYkkM3QmH453jyvyaVNv3vZx0es32vY_3_Eo_toIIXtwfU4bmXIK6l1k9cKqt5fGZQegDkxlDKONkxW-1enl8hbMtTuCoQKNBiM6_HajLs9hVbYSRL4hzZRSA4NCgZwFTw"/>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">NutriFast</h1>
+<button class="text-primary hover:opacity-80 transition-all duration-200 active:scale-95 flex items-center justify-center w-touch-target h-touch-target -mr-sm">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main>
+<!-- Search Section -->
+<section class="px-container-padding pt-md pb-xs">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors z-10 pointer-events-none">search</span>
+<input class="w-full h-[52px] pl-12 pr-sm rounded-xl bg-surface-container-low text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface border border-transparent focus:border-transparent shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all placeholder:text-on-surface-variant font-body-lg text-body-lg" placeholder="Search food..." type="text"/>
+<button class="absolute right-sm top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors hidden group-focus-within:flex">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+</section>
+<!-- Suggested Foods (Chips) -->
+<section class="px-container-padding mb-xl overflow-x-auto hide-scrollbar">
+<div class="flex gap-sm w-max py-xs">
+<!-- High emphasis chip -->
+<button class="px-md py-[6px] rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap active:scale-95 transition-transform shadow-[0_2px_4px_rgba(254,166,25,0.2)]">
+                        Roti
+                    </button>
+<!-- Standard chips -->
+<button class="px-md py-[6px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all">
+                        Dal
+                    </button>
+<button class="px-md py-[6px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all">
+                        Rice
+                    </button>
+<button class="px-md py-[6px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all">
+                        Paneer
+                    </button>
+<button class="px-md py-[6px] rounded-full bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all">
+                        Chicken Breast
+                    </button>
+</div>
+</section>
+<!-- Active Selection / Editing Area (Simulating a selected item) -->
+<section class="px-container-padding mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Selected Item</h2>
+<!-- Glassmorphic Card for editing -->
+<div class="bg-surface-bright rounded-[24px] p-md shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-surface-variant/50 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-[6px] bg-primary rounded-l-[24px]"></div>
+<div class="flex justify-between items-start mb-md pl-xs">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Roti (Chapati)</h3>
+<div class="flex items-center gap-xs mt-1">
+<span class="font-label-md text-label-md text-on-surface-variant">71 kcal</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex gap-2 font-caption text-caption">
+<span class="text-secondary">15g C</span>
+<span class="text-primary">2g P</span>
+<span class="text-tertiary">0g F</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest hover:text-error active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Portion and Quantity Controls -->
+<div class="flex gap-sm items-center pl-xs">
+<!-- Portion Dropdown -->
+<div class="relative flex-[2]">
+<select class="w-full h-touch-target appearance-none bg-surface-container-low border border-outline-variant/40 rounded-xl px-sm pr-10 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:bg-surface transition-colors cursor-pointer shadow-sm">
+<option>1 Medium (6" dia)</option>
+<option>1 Large (8" dia)</option>
+<option>100 grams</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Quantity Stepper -->
+<div class="flex flex-[1] items-center justify-between border border-outline-variant/40 rounded-xl bg-surface-container-low h-touch-target overflow-hidden shadow-sm">
+<button class="w-[38px] h-full flex items-center justify-center text-on-surface hover:bg-surface-container-highest active:bg-surface-variant transition-colors" onclick="this.nextElementSibling.stepDown()">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-8 h-full text-center border-none p-0 font-headline-md text-headline-md text-on-surface focus:ring-0 appearance-none bg-transparent m-0" min="1" type="number" value="2"/>
+<button class="w-[38px] h-full flex items-center justify-center text-primary hover:bg-surface-container-highest active:bg-surface-variant transition-colors" onclick="this.previousElementSibling.stepUp()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Foods -->
+<section class="px-container-padding pb-32">
+<div class="flex justify-between items-end mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Foods</h2>
+<button class="font-label-md text-label-md text-primary hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-sm">
+<!-- List Item 1 -->
+<div class="flex items-center justify-between bg-surface rounded-xl p-xs pr-sm shadow-[0_2px_8px_rgba(0,0,0,0.02)] border border-surface-variant/30 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary/70">
+<span class="material-symbols-outlined">ramen_dining</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Dal Tadka</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">1 Bowl (150g) • 180 kcal</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-primary hover:text-on-primary hover:shadow-md active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 500;">add</span>
+</button>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center justify-between bg-surface rounded-xl p-xs pr-sm shadow-[0_2px_8px_rgba(0,0,0,0.02)] border border-surface-variant/30 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary/70">
+<span class="material-symbols-outlined">egg_alt</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Boiled Egg</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">1 Large • 78 kcal</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-primary hover:text-on-primary hover:shadow-md active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 500;">add</span>
+</button>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center justify-between bg-surface rounded-xl p-xs pr-sm shadow-[0_2px_8px_rgba(0,0,0,0.02)] border border-surface-variant/30 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">rice_bowl</span>
+</div>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Steamed Rice</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">1 Cup (158g) • 205 kcal</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-primary hover:text-on-primary hover:shadow-md active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 500;">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating CTA Area (Docked above nav) -->
+<div class="fixed bottom-[72px] left-0 w-full max-w-md md:left-auto md:w-full px-container-padding pb-md pt-xl bg-gradient-to-t from-surface via-surface/90 to-transparent z-30 pointer-events-none">
+<button class="w-full h-[52px] rounded-xl bg-primary text-on-primary font-headline-md text-headline-md shadow-[0_8px_16px_rgba(0,110,47,0.25)] flex items-center justify-center gap-sm active:scale-95 transition-transform pointer-events-auto hover:bg-primary-fixed-variant">
+<span>Add Meal</span>
+<span class="px-2 py-[2px] bg-white/20 rounded-md font-label-md text-label-md">1 item</span>
+</button>
+</div>
+<!-- BottomNavBar Shared Component -->
+<nav class="fixed bottom-0 w-full max-w-md z-50 flex justify-around items-center px-lg py-xs bg-surface/90 backdrop-blur-xl shadow-lg docked full-width bottom-0 rounded-t-xl border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-high transition-colors active:scale-90 duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[28px]">home</span>
+</button>
+<!-- Active Navigation Item based on semantic mapping to 'Add Meal' -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full p-2 hover:bg-surface-container-high transition-colors active:scale-90 duration-150">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-high transition-colors active:scale-90 duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[28px]">history</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-high transition-colors active:scale-90 duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[28px]">fitness_center</span>
+</button>
+</nav>
+</div>
+</body></html>

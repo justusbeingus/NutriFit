@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriFast - Workout Plan</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2a313d",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-container": "#fea619",
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-dim": "#d3daea",
+                    "on-secondary-fixed": "#2a1700",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#dce2f3",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#860011",
+                    "primary-fixed-dim": "#4ae176",
+                    "surface-tint": "#006e2f",
+                    "surface-container-high": "#e2e8f8",
+                    "on-surface": "#151c27",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dce2f3",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-secondary-container": "#684000",
+                    "tertiary-container": "#ff8a83",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#6bff8f",
+                    "inverse-primary": "#4ae176",
+                    "tertiary": "#b91a24",
+                    "on-background": "#151c27",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "primary": "#006e2f",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-primary-container": "#004b1e",
+                    "secondary-fixed": "#ffddb8",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "secondary": "#855300",
+                    "outline": "#6d7b6c",
+                    "on-surface-variant": "#3d4a3d",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "surface": "#f9f9ff",
+                    "outline-variant": "#bccbb9",
+                    "primary-container": "#22c55e",
+                    "on-tertiary-fixed": "#410004",
+                    "surface-container": "#e7eefe",
+                    "background": "#f9f9ff",
+                    "on-primary-fixed": "#002109",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "xl": "32px",
+                    "touch-target": "44px",
+                    "md": "16px",
+                    "xs": "8px",
+                    "base": "4px",
+                    "sm": "12px",
+                    "container-padding": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-data": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-data": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scrolls */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Soft custom shadow for level 1 cards per guidance */
+        .shadow-level-1 {
+            box-shadow: 0px 4px 12px rgba(21, 28, 39, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pb-24 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 docked full-width top-0 sticky backdrop-blur-md z-40">
+<div class="flex justify-between items-center px-container-padding h-touch-target w-full">
+<div class="flex items-center gap-sm">
+<img alt="User Profile" class="w-8 h-8 rounded-full object-cover transition-all duration-200 active:scale-95 hover:opacity-80 cursor-pointer" data-alt="A close-up, highly professional headshot of a healthy, glowing individual with a friendly expression. The lighting is soft, high-key, and reminiscent of morning sunlight in a minimal clinical space. The background is a pure, soft white to maintain the airy, clean aesthetic of the NutriFast app environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQPIwtLtRjYcaKhAvL5BDwm-b9asfyLCODEGGSZWOOwZIvk2mhcll7G0Uy6bvQpc7HosowqkyINBl3iEBqVOLyB6AkpVzm8NqbEG8_PlPrV4AhP-DegV5DxyIfAjFtj4ub250ggrMjvN0pnhHJ_cfzMynhhQKzN0Z3TGWN347dheQZD0qLGHGF4F1O-Ah3mjbLDAnf9isaedExu3uPuz0eCBxhdUOTkRXnkxM4veGyBoBZpUHevmGvQwrieMgzaX754yFT3bkEx2g"/>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">NutriFast</h1>
+<button aria-label="Calendar" class="text-primary dark:text-primary-fixed-dim transition-all duration-200 active:scale-95 hover:opacity-80 flex items-center justify-center w-touch-target h-touch-target">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="px-container-padding mt-md flex flex-col gap-xl max-w-2xl mx-auto">
+<!-- Header Section -->
+<section>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-base">Craft Your Session</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Adjust your preferences to get a personalized routine.</p>
+</section>
+<!-- Configuration Bento / Flow -->
+<section class="flex flex-col gap-lg bg-surface p-container-padding rounded-xl shadow-level-1 border border-outline-variant/30">
+<!-- Goal Selection -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-xs">Goal</h3>
+<div class="flex gap-sm overflow-x-auto no-scrollbar pb-1">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95">Fat Loss</button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95 hover:bg-surface-container-highest">Muscle Gain</button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95 hover:bg-surface-container-highest">Mobility</button>
+</div>
+</div>
+<!-- Equipment Selection -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-xs">Equipment</h3>
+<div class="flex gap-sm overflow-x-auto no-scrollbar pb-1">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95">None</button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95 hover:bg-surface-container-highest">Yoga Mat</button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95 hover:bg-surface-container-highest">Dumbbells</button>
+</div>
+</div>
+<!-- Time Selection -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-xs">Duration</h3>
+<div class="flex gap-sm">
+<button class="flex-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md py-sm rounded-lg transition-transform active:scale-95 hover:bg-surface-container-highest">15 min</button>
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md py-sm rounded-lg shadow-sm transition-transform active:scale-95">30 min</button>
+<button class="flex-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md py-sm rounded-lg transition-transform active:scale-95 hover:bg-surface-container-highest">45 min</button>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md h-touch-target rounded-lg mt-sm shadow-md hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+                Update Plan
+            </button>
+</section>
+<!-- Workout Plan List -->
+<section class="flex flex-col gap-md pb-md">
+<div class="flex justify-between items-end mb-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface">30 Min Fat Loss</h2>
+<span class="font-caption text-caption text-on-surface-variant">4 Exercises • 3 Rounds</span>
+</div>
+<!-- Exercise Card 1 -->
+<div class="bg-surface rounded-[24px] shadow-level-1 p-md flex items-center gap-md border border-outline-variant/20 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+<img alt="Jumping Jacks" class="w-full h-full object-cover mix-blend-multiply" data-alt="A bright, minimalist fitness illustration or photo showing a person mid-air performing a jumping jack. The background is pure white to emphasize the clean clinical aesthetic of the health app. The lighting is even and soft, with subtle muted green tones in the subject's athletic wear to echo the primary brand color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-4aXrLvAMdfZRo-KmikDys_N7E_igelE-znzEuXI0fD6RXmaSZs-8-ARz7MiQlirJZpKtfB7mWzzsOdHLbRgvaBYom5U9V1Yw6TqTJWtsVITDhE-r5H-2JZ3RiyuLN3g738e7szd-cTla9qKyRPH8zF7vX5kK7g0PRuqUrgyV7F8JETGy81vroMPOdbXxEPLkkCAouktw2TVUwh_TIa9lL55EtWTM4hDUeYmqS0vd3y42YPGJGfxz-b3AooGlAVraPJqgadRpotE"/>
+</div>
+<div class="flex-1">
+<p class="font-caption text-caption text-primary font-semibold mb-1 uppercase tracking-wider">Warmup</p>
+<h3 class="font-headline-md text-[18px] leading-tight text-on-surface mb-1">Jumping Jacks</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">timer</span> 60 Seconds
+                    </p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Exercise Card 2 -->
+<div class="bg-surface rounded-[24px] shadow-level-1 p-md flex items-center gap-md border border-outline-variant/20 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+<img alt="Bodyweight Squats" class="w-full h-full object-cover mix-blend-multiply" data-alt="A clean, modern photographic depiction of a fit individual performing a perfect bodyweight squat. The setting is an abstract, minimalist studio filled with soft, diffused white light. The color palette relies heavily on stark whites and grays, accented by a subtle, healthy green tint to maintain brand alignment with the fitness interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDYrB4BW0B4eMJzRG-TpZObc1We_sA6jU5EILfDbuim3t7ItEhuOknOC0ljOi56GyTOVJFR7X28g7UQ-4FDo1U2rqXCGk_3M9BtLiVEo_q1Mbfg9ReDNA9cDDPJtByW1bDLKV3ymEOz5iLp5bk4Gr7alZiA4KRRvcKeeWFZfoXo7pjZVL8sVtdlAmdQ-FMBb4Nn7x0HX3-CaT-qnZW2uMOkQnTuqamDa2LKZbWglG1fOTfLPBI04vI3JqTjs5-FMPuOavznUxUtdM"/>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[18px] leading-tight text-on-surface mb-1">Bodyweight Squats</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">repeat</span> 3 Sets • 15 Reps
+                    </p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Exercise Card 3 -->
+<div class="bg-surface rounded-[24px] shadow-level-1 p-md flex items-center gap-md border border-outline-variant/20 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+<img alt="Push-ups" class="w-full h-full object-cover mix-blend-multiply" data-alt="A high-key, minimalist photograph capturing a person holding a plank or push-up position on a clean floor. The environment is entirely white and bright, eliminating shadows to create a clinical, airy feel. Small details in the athletic clothing feature the app's signature vibrant green tone, establishing a strong, cohesive visual language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8mdq8Bri1ZJaMkto7TUok9zxk7EEJ92Ay3s2Lm8mxbIyXPuClrLeGSXzmtJOiH3gnhcyq3XvgMICg1CmwgHHXHKBWW8uuOYyQqDSJ-2RMyD2d8sKE1CQ-Mpej6h30xdeT9s1iadRiVg5ewNdVgR48kqr_RqShVBuS4zJPjIoK1k1MVGv3O3Gs62IlrGHlaPt9Hkw6Bz60svpnZP_VSa3hL3yrygR-lvSN1KtnApvDC4LsHv6nI2VhjXUegVU6PJL17NfPOX3f-ew"/>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[18px] leading-tight text-on-surface mb-1">Modified Push-ups</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">repeat</span> 3 Sets • 10 Reps
+                    </p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Exercise Card 4 -->
+<div class="bg-surface rounded-[24px] shadow-level-1 p-md flex items-center gap-md border border-outline-variant/20 hover:border-primary/30 transition-colors cursor-pointer group">
+<div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+<img alt="Plank" class="w-full h-full object-cover mix-blend-multiply" data-alt="A focused, modern visual of an individual holding a steady core plank. Shot from a low angle against a pristine, seamless white background that exudes a clinical minimalism. The lighting is extremely soft and flattering, with no harsh contrast. A subtle, transparent overlay of the app's primary green hue ties the image to the interface design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2D1_FHgJG8wGC7FQDI26ja2FY0QbP3Zxy0g73ED52doXZ7UfgmVzYkuNtmqtgCrkv4BaMp0VYml5jrumXTSfV-issD9_0ASaau0_KEkWUMZUTjtvoTLA-bj2aY4jJ8oDbCTrRWcOA0V752ZMhWmW4OUnEYVPFh278-DcTj09-XtrcBq1538LVB-VqwZSC2kXziBR7nH8FGEQhiUxY6_V7hgCl4BUxfgVXc9ecAJKsqb8BSvmxwryNZSnkGHNwB3rbIcMvfo0rofs"/>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-[18px] leading-tight text-on-surface mb-1">Forearm Plank</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">timer</span> 3 Sets • 45 Sec
+                    </p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<button class="mt-md w-full bg-surface-container-high text-primary font-label-md text-label-md h-touch-target rounded-lg hover:bg-surface-container-highest active:scale-[0.98] transition-all flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined">add</span>
+                Add Exercise
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface/90 dark:bg-inverse-surface/90 docked full-width bottom-0 rounded-t-xl border-t border-outline-variant dark:border-outline backdrop-blur-xl shadow-lg fixed w-full z-50 flex justify-around items-center px-lg py-xs md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined">history</span>
+</a>
+<!-- Active Tab: Workouts mapped to fitness_center -->
+<a aria-current="page" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-full p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</a>
+</nav>
+<!-- Simple JS for micro-interactions (selection toggles visually only for demo) -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleGroups = document.querySelectorAll('.flex.gap-sm.overflow-x-auto');
+            
+            toggleGroups.forEach(group => {
+                const buttons = group.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Reset all in group
+                        buttons.forEach(b => {
+                            b.className = "bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95 hover:bg-surface-container-highest";
+                        });
+                        // Set active
+                        btn.className = "bg-primary-container text-on-primary-container font-label-md text-label-md px-md py-sm rounded-full whitespace-nowrap transition-transform active:scale-95";
+                    });
+                });
+            });
+        });
+    </script>
+</body></html>

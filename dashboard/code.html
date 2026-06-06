@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>NutriFast - Dashboard</title>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS Setup -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2a313d",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-container": "#fea619",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface-dim": "#d3daea",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dce2f3",
+                        "surface-bright": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#860011",
+                        "primary-fixed-dim": "#4ae176",
+                        "surface-tint": "#006e2f",
+                        "surface-container-high": "#e2e8f8",
+                        "on-surface": "#151c27",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#dce2f3",
+                        "on-primary-fixed-variant": "#005321",
+                        "on-secondary-container": "#684000",
+                        "tertiary-container": "#ff8a83",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#6bff8f",
+                        "inverse-primary": "#4ae176",
+                        "tertiary": "#b91a24",
+                        "on-background": "#151c27",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "primary": "#006e2f",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-primary-container": "#004b1e",
+                        "secondary-fixed": "#ffddb8",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "secondary": "#855300",
+                        "outline": "#6d7b6c",
+                        "on-surface-variant": "#3d4a3d",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "surface": "#f9f9ff",
+                        "outline-variant": "#bccbb9",
+                        "primary-container": "#22c55e",
+                        "on-tertiary-fixed": "#410004",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "on-primary-fixed": "#002109",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "xl": "32px",
+                        "touch-target": "44px",
+                        "md": "16px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "sm": "12px",
+                        "container-padding": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "display-data": ["Inter", "sans-serif"],
+                        "caption": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-data": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+                    },
+                    "boxShadow": {
+                        'soft': '0 4px 12px 0 rgba(0, 0, 0, 0.05)',
+                        'float': '0 8px 24px 0 rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 docked full-width top-0 sticky backdrop-blur-md transition-all duration-200 z-40">
+<div class="flex justify-between items-center px-container-padding h-touch-target w-full">
+<div class="flex items-center gap-xs">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high shrink-0">
+<img alt="User profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBACPTx4DVYjT2rvvp-dLtsTwFU0wiam8ZqbAre_ggdaRc1SZDOjSplE3QQrpDB7r2dg-VFPVis-XGHjXO7IvNfiKpKTelCdQWTUSKSv4M4kWDlr0HUPUtkQUj6FYoV19BT5hqth5AFdROBVCTi7hzsyUDClf-8KxiwIxVtAFqgEEktqGbyAOUvYx_VpGM3Fv6QxoeSAlabzRZPOzr7wQEbWJOnwrzplYgpRnPesFbvHMGxEW4pSPjUK_AHw_3Ggnx3uMXFc63mYvY"/>
+</div>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">NutriFast</h1>
+<button aria-label="Calendar" class="w-touch-target h-touch-target flex items-center justify-end text-primary dark:text-primary-fixed-dim hover:opacity-80 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-container-padding pt-md space-y-xl md:flex md:max-w-7xl md:gap-lg md:space-y-0 md:pt-lg">
+<!-- Left Column (Desktop) / Main Content (Mobile) -->
+<div class="flex-1 space-y-xl">
+<!-- Hero Dashboard Section (Glassmorphic) -->
+<section class="bg-surface-container-lowest rounded-3xl p-lg shadow-soft relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary-container opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs relative z-10">Today's Summary</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg relative z-10">You're on track to hit your goals.</p>
+<!-- Main Calorie Progress -->
+<div class="flex flex-col items-center justify-center mb-xl relative z-10">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Background Circle -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-primary-container/20" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress Circle (72% roughly 1800/2500) -->
+<circle class="text-primary-container transition-all duration-1000 ease-out" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="70.3" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-display-data text-display-data text-on-surface">1800</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">/ 2500 kcal</span>
+</div>
+</div>
+</div>
+<!-- Macros Bento Grid -->
+<div class="grid grid-cols-3 gap-sm relative z-10">
+<!-- Protein -->
+<div class="bg-surface p-sm rounded-xl border border-surface-variant flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface-variant mb-base">Protein</span>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mb-xs">
+<div class="h-full bg-primary-container w-[80%] rounded-full"></div>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">120g</span>
+</div>
+<!-- Carbs -->
+<div class="bg-surface p-sm rounded-xl border border-surface-variant flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface-variant mb-base">Carbs</span>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mb-xs">
+<div class="h-full bg-secondary-container w-[65%] rounded-full"></div>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">200g</span>
+</div>
+<!-- Fats -->
+<div class="bg-surface p-sm rounded-xl border border-surface-variant flex flex-col items-center">
+<span class="font-label-md text-label-md text-on-surface-variant mb-base">Fats</span>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden mb-xs">
+<div class="h-full bg-tertiary-container w-[40%] rounded-full"></div>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface">45g</span>
+</div>
+</div>
+</section>
+<!-- Alerts Section -->
+<section class="space-y-sm">
+<!-- Iron Alert -->
+<div class="bg-error-container text-on-error-container p-md rounded-xl flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error">warning</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md font-bold">Low iron today</h3>
+<p class="font-caption text-caption opacity-90">Consider adding spinach or lentils to dinner.</p>
+</div>
+<button aria-label="Dismiss alert" class="w-touch-target h-touch-target flex items-center justify-center shrink-0 hover:opacity-80 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-error-container">close</span>
+</button>
+</div>
+<!-- Calcium Alert -->
+<div class="bg-surface-container text-on-surface p-md rounded-xl border border-surface-variant flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-md text-label-md font-bold">Low calcium intake</h3>
+<p class="font-caption text-caption text-on-surface-variant">A glass of milk could help hit your goal.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column (Desktop) / Continuation (Mobile) -->
+<div class="flex-1 space-y-md">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Today's Meals</h2>
+<!-- Breakfast Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft">
+<div class="flex justify-between items-center mb-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Breakfast</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">450 kcal</span>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center py-xs border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">Oatmeal with Berries</span>
+<span class="font-caption text-caption text-on-surface-variant">300 kcal</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">Black Coffee</span>
+<span class="font-caption text-caption text-on-surface-variant">5 kcal</span>
+</div>
+<div class="flex justify-between items-center py-xs">
+<span class="font-body-md text-body-md text-on-surface">Boiled Egg</span>
+<span class="font-caption text-caption text-on-surface-variant">145 kcal</span>
+</div>
+</div>
+<button class="w-full mt-sm py-sm flex items-center justify-center gap-xs text-primary font-label-md text-label-md hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Add to Breakfast
+                </button>
+</div>
+<!-- Lunch Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft">
+<div class="flex justify-between items-center mb-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">clear_day</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Lunch</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">850 kcal</span>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center py-xs border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">Grilled Chicken Salad</span>
+<span class="font-caption text-caption text-on-surface-variant">450 kcal</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface">Quinoa</span>
+<span class="font-caption text-caption text-on-surface-variant">200 kcal</span>
+</div>
+<div class="flex justify-between items-center py-xs">
+<span class="font-body-md text-body-md text-on-surface">Olive Oil Dressing</span>
+<span class="font-caption text-caption text-on-surface-variant">200 kcal</span>
+</div>
+</div>
+<button class="w-full mt-sm py-sm flex items-center justify-center gap-xs text-primary font-label-md text-label-md hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Add to Lunch
+                </button>
+</div>
+<!-- Dinner Card (Empty State) -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-soft border border-dashed border-outline-variant/50">
+<div class="flex justify-between items-center mb-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Dinner</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">0 kcal</span>
+</div>
+<div class="py-lg flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-outline-variant text-[48px] mb-sm font-light">restaurant</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Nothing logged yet.</p>
+</div>
+<button class="w-full mt-xs py-sm flex items-center justify-center gap-xs bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed rounded-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Log Dinner
+                </button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<button aria-label="Quick Add Meal" class="fixed bottom-[88px] right-lg md:bottom-lg w-14 h-14 bg-primary-container text-on-primary-container rounded-2xl shadow-float flex items-center justify-center hover:bg-primary-fixed active:scale-95 transition-all duration-200 z-50 md:right-xl md:w-16 md:h-16">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface/90 dark:bg-inverse-surface/90 font-label-md text-label-md font-headline-md text-headline-md font-bold text-primary docked full-width bottom-0 rounded-t-xl border-t border-outline-variant dark:border-outline backdrop-blur-xl shadow-lg fixed bottom-0 w-full z-50 flex justify-around items-center px-lg py-xs">
+<!-- Active Tab: Home -->
+<a aria-label="Home" class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-full p-2 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<!-- Inactive Tabs -->
+<a aria-label="Add" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-full active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+</a>
+<a aria-label="History" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-full active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+</a>
+<a aria-label="Fitness" class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors rounded-full active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+</a>
+</nav>
+</body></html>
