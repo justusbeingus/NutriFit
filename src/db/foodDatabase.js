@@ -1966,6 +1966,1398 @@ export const foodDatabase = [
         "grams": 100
       }
     ]
+  },
+  {
+    "id": "pomegranate",
+    "name": "Pomegranate (Fresh Seeds)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 83,
+      "protein": 1.7,
+      "carbs": 18.7,
+      "fats": 1.2,
+      "iron": 0.3,
+      "calcium": 10,
+      "fiber": 4,
+      "vitamin_b12": 0,
+      "vitamin_c": 10.2
+    },
+    "portions": [
+      {
+        "name": "1 Medium Bowl (Seeds)",
+        "grams": 150
+      },
+      {
+        "name": "1 Medium Fruit",
+        "grams": 280
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "grapes",
+    "name": "Grapes (Green/Black)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 69,
+      "protein": 0.7,
+      "carbs": 18.1,
+      "fats": 0.2,
+      "iron": 0.3,
+      "calcium": 10,
+      "fiber": 0.9,
+      "vitamin_b12": 0,
+      "vitamin_c": 3.2
+    },
+    "portions": [
+      {
+        "name": "1 Bowl (~30 grapes)",
+        "grams": 150
+      },
+      {
+        "name": "1 Grape",
+        "grams": 5
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "strawberries",
+    "name": "Strawberries (Fresh)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 32,
+      "protein": 0.7,
+      "carbs": 7.7,
+      "fats": 0.3,
+      "iron": 0.4,
+      "calcium": 16,
+      "fiber": 2,
+      "vitamin_b12": 0,
+      "vitamin_c": 58.8
+    },
+    "portions": [
+      {
+        "name": "1 Bowl (~10 berries)",
+        "grams": 150
+      },
+      {
+        "name": "1 Large Strawberry",
+        "grams": 18
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "guava",
+    "name": "Guava (Amrood)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 68,
+      "protein": 2.6,
+      "carbs": 14.3,
+      "fats": 1,
+      "iron": 0.3,
+      "calcium": 18,
+      "fiber": 5.4,
+      "vitamin_b12": 0,
+      "vitamin_c": 228.3
+    },
+    "portions": [
+      {
+        "name": "1 Medium Guava",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pear",
+    "name": "Pear (Nashpati)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 57,
+      "protein": 0.4,
+      "carbs": 15.2,
+      "fats": 0.1,
+      "iron": 0.2,
+      "calcium": 9,
+      "fiber": 3.1,
+      "vitamin_b12": 0,
+      "vitamin_c": 4.3
+    },
+    "portions": [
+      {
+        "name": "1 Medium Pear",
+        "grams": 178
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "dates",
+    "name": "Dates (Khajur)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 277,
+      "protein": 1.8,
+      "carbs": 75,
+      "fats": 0.2,
+      "iron": 0.9,
+      "calcium": 64,
+      "fiber": 6.7,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Date",
+        "grams": 8
+      },
+      {
+        "name": "1 Large Medjool Date",
+        "grams": 24
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "cashews",
+    "name": "Cashews (Raw)",
+    "category": "Fats & Spreads",
+    "nutrition_per_100g": {
+      "calories": 553,
+      "protein": 18.2,
+      "carbs": 30.2,
+      "fats": 43.8,
+      "iron": 6.7,
+      "calcium": 37,
+      "fiber": 3.3,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Handful (~15 nuts)",
+        "grams": 28
+      },
+      {
+        "name": "1 Cashew",
+        "grams": 1.5
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pistachios",
+    "name": "Pistachios (Raw, Shelled)",
+    "category": "Fats & Spreads",
+    "nutrition_per_100g": {
+      "calories": 562,
+      "protein": 20.2,
+      "carbs": 27.2,
+      "fats": 45.3,
+      "iron": 3.9,
+      "calcium": 105,
+      "fiber": 10.6,
+      "vitamin_b12": 0,
+      "vitamin_c": 5.6
+    },
+    "portions": [
+      {
+        "name": "1 Handful (~30 kernels)",
+        "grams": 28
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "chia_seeds",
+    "name": "Chia Seeds",
+    "category": "Dairy & Protein",
+    "nutrition_per_100g": {
+      "calories": 486,
+      "protein": 16.5,
+      "carbs": 42.1,
+      "fats": 30.7,
+      "iron": 7.7,
+      "calcium": 631,
+      "fiber": 34.4,
+      "vitamin_b12": 0,
+      "vitamin_c": 1.6
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 12
+      },
+      {
+        "name": "1 Teaspoon",
+        "grams": 4
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "flax_seeds",
+    "name": "Flax Seeds (Alsi)",
+    "category": "Dairy & Protein",
+    "nutrition_per_100g": {
+      "calories": 534,
+      "protein": 18.3,
+      "carbs": 28.9,
+      "fats": 42.2,
+      "iron": 5.7,
+      "calcium": 255,
+      "fiber": 27.3,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.6
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 10
+      },
+      {
+        "name": "1 Teaspoon",
+        "grams": 3
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "sunflower_seeds",
+    "name": "Sunflower Seeds",
+    "category": "Dairy & Protein",
+    "nutrition_per_100g": {
+      "calories": 584,
+      "protein": 20.8,
+      "carbs": 20,
+      "fats": 51.5,
+      "iron": 5.3,
+      "calcium": 78,
+      "fiber": 8.6,
+      "vitamin_b12": 0,
+      "vitamin_c": 1.4
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 10
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pumpkin_seeds",
+    "name": "Pumpkin Seeds",
+    "category": "Dairy & Protein",
+    "nutrition_per_100g": {
+      "calories": 559,
+      "protein": 30.2,
+      "carbs": 10.7,
+      "fats": 49,
+      "iron": 8.8,
+      "calcium": 46,
+      "fiber": 6,
+      "vitamin_b12": 0,
+      "vitamin_c": 1.9
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 10
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "paneer_butter_masala",
+    "name": "Paneer Butter Masala",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 229,
+      "protein": 9.8,
+      "carbs": 6.2,
+      "fats": 18.3,
+      "iron": 0.8,
+      "calcium": 290,
+      "fiber": 0.8,
+      "vitamin_b12": 0.35,
+      "vitamin_c": 2.1
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "1 Serving",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "kadai_paneer",
+    "name": "Kadai Paneer",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 185,
+      "protein": 10.2,
+      "carbs": 5.5,
+      "fats": 13.6,
+      "iron": 1.1,
+      "calcium": 310,
+      "fiber": 1.2,
+      "vitamin_b12": 0.3,
+      "vitamin_c": 9.5
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "egg_curry",
+    "name": "Egg Curry (with Gravy)",
+    "category": "Indian",
+    "nutrition_per_100g": {
+      "calories": 125,
+      "protein": 7.2,
+      "carbs": 3.8,
+      "fats": 9,
+      "iron": 1.1,
+      "calcium": 38,
+      "fiber": 0.6,
+      "vitamin_b12": 0.7,
+      "vitamin_c": 1.8
+    },
+    "portions": [
+      {
+        "name": "1 Bowl (2 Eggs + Gravy)",
+        "grams": 200
+      },
+      {
+        "name": "1 Egg with Gravy",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "butter_chicken",
+    "name": "Butter Chicken (Murgh Makhani)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 210,
+      "protein": 14.5,
+      "carbs": 4.8,
+      "fats": 15,
+      "iron": 1.1,
+      "calcium": 22,
+      "fiber": 0.5,
+      "vitamin_b12": 0.25,
+      "vitamin_c": 1.2
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "1 Serving",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "tandoori_chicken",
+    "name": "Tandoori Chicken (Bone-in)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 150,
+      "protein": 22,
+      "carbs": 1.8,
+      "fats": 6,
+      "iron": 1.2,
+      "calcium": 25,
+      "fiber": 0.2,
+      "vitamin_b12": 0.4,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Chicken Leg Quarter",
+        "grams": 180
+      },
+      {
+        "name": "1 Chicken Breast Piece",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "fish_tikka",
+    "name": "Fish Tikka (Grilled)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 135,
+      "protein": 19.5,
+      "carbs": 1.5,
+      "fats": 5.5,
+      "iron": 1,
+      "calcium": 30,
+      "fiber": 0.1,
+      "vitamin_b12": 2.2,
+      "vitamin_c": 0.8
+    },
+    "portions": [
+      {
+        "name": "1 Plate (~6 pieces)",
+        "grams": 180
+      },
+      {
+        "name": "1 Piece",
+        "grams": 30
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "mutton_biryani",
+    "name": "Mutton Biryani",
+    "category": "Indian",
+    "nutrition_per_100g": {
+      "calories": 180,
+      "protein": 9.2,
+      "carbs": 21,
+      "fats": 6.8,
+      "iron": 1.2,
+      "calcium": 20,
+      "fiber": 1.4,
+      "vitamin_b12": 0.6,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 350
+      },
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "vegetable_pulao",
+    "name": "Vegetable Pulao",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 145,
+      "protein": 3.1,
+      "carbs": 26.5,
+      "fats": 3,
+      "iron": 0.8,
+      "calcium": 18,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 3.5
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 250
+      },
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "jeera_rice",
+    "name": "Jeera Rice (Cumin Rice)",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 140,
+      "protein": 2.8,
+      "carbs": 28.5,
+      "fats": 1.8,
+      "iron": 0.4,
+      "calcium": 12,
+      "fiber": 0.6,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 250
+      },
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "rava_dosa",
+    "name": "Rava Dosa",
+    "category": "South Indian",
+    "nutrition_per_100g": {
+      "calories": 195,
+      "protein": 4.8,
+      "carbs": 34,
+      "fats": 4.5,
+      "iron": 1.4,
+      "calcium": 16,
+      "fiber": 1.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Medium Dosa",
+        "grams": 90
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "uttapam",
+    "name": "Uttapam (Onion & Tomato)",
+    "category": "South Indian",
+    "nutrition_per_100g": {
+      "calories": 150,
+      "protein": 3.6,
+      "carbs": 26.8,
+      "fats": 3.2,
+      "iron": 0.9,
+      "calcium": 15,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 5.2
+    },
+    "portions": [
+      {
+        "name": "1 Medium Uttapam",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "dhokla",
+    "name": "Khaman Dhokla (Steamed)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 145,
+      "protein": 5.5,
+      "carbs": 23,
+      "fats": 3.5,
+      "iron": 1.8,
+      "calcium": 40,
+      "fiber": 2.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 1
+    },
+    "portions": [
+      {
+        "name": "1 Piece",
+        "grams": 40
+      },
+      {
+        "name": "1 Plate (3 Pieces)",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "khandvi",
+    "name": "Khandvi",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 120,
+      "protein": 4.2,
+      "carbs": 14.5,
+      "fats": 5.2,
+      "iron": 1.2,
+      "calcium": 35,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Piece",
+        "grams": 20
+      },
+      {
+        "name": "1 Plate (5 Pieces)",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "sabudana_khichdi",
+    "name": "Sabudana Khichdi",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 220,
+      "protein": 2.8,
+      "carbs": 39.5,
+      "fats": 5.8,
+      "iron": 1,
+      "calcium": 22,
+      "fiber": 1.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 3
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "methi_thepla",
+    "name": "Methi Thepla",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 280,
+      "protein": 8.5,
+      "carbs": 49,
+      "fats": 5.8,
+      "iron": 4.2,
+      "calcium": 80,
+      "fiber": 5.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 6.2
+    },
+    "portions": [
+      {
+        "name": "1 Thepla (Medium)",
+        "grams": 35
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "missi_roti",
+    "name": "Missi Roti (Gram Flour Flatbread)",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 295,
+      "protein": 11.8,
+      "carbs": 48,
+      "fats": 6.2,
+      "iron": 4.8,
+      "calcium": 55,
+      "fiber": 6.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.8
+    },
+    "portions": [
+      {
+        "name": "1 Medium Roti",
+        "grams": 45
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "ragi_roti",
+    "name": "Ragi Roti (Finger Millet)",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 265,
+      "protein": 6.8,
+      "carbs": 58.2,
+      "fats": 1.8,
+      "iron": 3.9,
+      "calcium": 340,
+      "fiber": 9.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Medium Roti",
+        "grams": 45
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "garlic_naan",
+    "name": "Garlic Butter Naan",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 330,
+      "protein": 8.5,
+      "carbs": 52,
+      "fats": 10,
+      "iron": 2.2,
+      "calcium": 45,
+      "fiber": 2,
+      "vitamin_b12": 0.1,
+      "vitamin_c": 1
+    },
+    "portions": [
+      {
+        "name": "1 Naan",
+        "grams": 90
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "rumali_roti",
+    "name": "Rumali Roti",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 285,
+      "protein": 8,
+      "carbs": 59.5,
+      "fats": 1.8,
+      "iron": 2.5,
+      "calcium": 28,
+      "fiber": 2.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Medium Roti",
+        "grams": 50
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "bhatura",
+    "name": "Bhatura (Fried)",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 380,
+      "protein": 7.8,
+      "carbs": 50,
+      "fats": 16.5,
+      "iron": 1.8,
+      "calcium": 35,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Bhatura",
+        "grams": 70
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "poori",
+    "name": "Poori (Fried)",
+    "category": "Indian Staples",
+    "nutrition_per_100g": {
+      "calories": 350,
+      "protein": 7.2,
+      "carbs": 47,
+      "fats": 15,
+      "iron": 2.4,
+      "calcium": 28,
+      "fiber": 4.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Poori",
+        "grams": 25
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "chole",
+    "name": "Chole (Punjabi Chickpea Curry)",
+    "category": "Dals & Legumes",
+    "nutrition_per_100g": {
+      "calories": 145,
+      "protein": 5.8,
+      "carbs": 19.5,
+      "fats": 5.2,
+      "iron": 2.1,
+      "calcium": 40,
+      "fiber": 5.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 3.5
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "1 Katori",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "dal_makhani",
+    "name": "Dal Makhani",
+    "category": "Dals & Legumes",
+    "nutrition_per_100g": {
+      "calories": 160,
+      "protein": 6.2,
+      "carbs": 18,
+      "fats": 7.2,
+      "iron": 2.2,
+      "calcium": 95,
+      "fiber": 4.8,
+      "vitamin_b12": 0.2,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "1 Katori",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "baingan_bharta",
+    "name": "Baingan Bharta (Mashed Roasted Eggplant)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 75,
+      "protein": 1.5,
+      "carbs": 7.8,
+      "fats": 4.2,
+      "iron": 0.8,
+      "calcium": 22,
+      "fiber": 2.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 6.5
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "lauki_sabzi",
+    "name": "Lauki Sabzi (Bottle Gourd Curry)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 55,
+      "protein": 0.8,
+      "carbs": 4.2,
+      "fats": 3.8,
+      "iron": 0.5,
+      "calcium": 20,
+      "fiber": 1.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 10
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "gobi_manchurian",
+    "name": "Gobi Manchurian",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 165,
+      "protein": 3.2,
+      "carbs": 22,
+      "fats": 7.2,
+      "iron": 1.2,
+      "calcium": 28,
+      "fiber": 2,
+      "vitamin_b12": 0,
+      "vitamin_c": 18
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 200
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "veg_noodles",
+    "name": "Veg Noodles (Chow Mein)",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 180,
+      "protein": 4,
+      "carbs": 31,
+      "fats": 4.5,
+      "iron": 1.1,
+      "calcium": 15,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 4
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 250
+      },
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "chicken_fried_rice",
+    "name": "Chicken Fried Rice",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 185,
+      "protein": 9.8,
+      "carbs": 26.5,
+      "fats": 4.8,
+      "iron": 1.2,
+      "calcium": 18,
+      "fiber": 1,
+      "vitamin_b12": 0.25,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Plate",
+        "grams": 300
+      },
+      {
+        "name": "1 Bowl",
+        "grams": 180
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "paneer_tikka_roll",
+    "name": "Paneer Tikka Roll",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 240,
+      "protein": 10.5,
+      "carbs": 26,
+      "fats": 10.5,
+      "iron": 1.5,
+      "calcium": 210,
+      "fiber": 2.2,
+      "vitamin_b12": 0.3,
+      "vitamin_c": 3.5
+    },
+    "portions": [
+      {
+        "name": "1 Roll",
+        "grams": 180
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "egg_roll",
+    "name": "Egg Roll",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 215,
+      "protein": 9,
+      "carbs": 23.5,
+      "fats": 9.5,
+      "iron": 1.4,
+      "calcium": 48,
+      "fiber": 1.5,
+      "vitamin_b12": 0.55,
+      "vitamin_c": 1.8
+    },
+    "portions": [
+      {
+        "name": "1 Roll",
+        "grams": 160
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "buttermilk",
+    "name": "Buttermilk (Salted Chaas)",
+    "category": "Dairy",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein": 1.6,
+      "carbs": 2.2,
+      "fats": 0.8,
+      "iron": 0.05,
+      "calcium": 70,
+      "fiber": 0,
+      "vitamin_b12": 0.2,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "sweet_lassi",
+    "name": "Sweet Lassi",
+    "category": "Dairy",
+    "nutrition_per_100g": {
+      "calories": 95,
+      "protein": 2.5,
+      "carbs": 14,
+      "fats": 3.2,
+      "iron": 0.08,
+      "calcium": 95,
+      "fiber": 0,
+      "vitamin_b12": 0.3,
+      "vitamin_c": 0.8
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "coconut_water",
+    "name": "Coconut Water (Nariyal Paani)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 19,
+      "protein": 0.7,
+      "carbs": 3.7,
+      "fats": 0.2,
+      "iron": 0.3,
+      "calcium": 24,
+      "fiber": 1.1,
+      "vitamin_b12": 0,
+      "vitamin_c": 2.4
+    },
+    "portions": [
+      {
+        "name": "1 Medium Coconut",
+        "grams": 300
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "lemonade",
+    "name": "Lemonade (Sweetened Nimbu Pani)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 40,
+      "protein": 0.1,
+      "carbs": 10.2,
+      "fats": 0,
+      "iron": 0.05,
+      "calcium": 4,
+      "fiber": 0.1,
+      "vitamin_b12": 0,
+      "vitamin_c": 8.5
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "roasted_chana",
+    "name": "Roasted Chana (Snack)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 364,
+      "protein": 18.6,
+      "carbs": 58,
+      "fats": 5.5,
+      "iron": 5.2,
+      "calcium": 55,
+      "fiber": 16.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Handful",
+        "grams": 25
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "makhana",
+    "name": "Roasted Makhana (Lotus Seeds)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 350,
+      "protein": 9.7,
+      "carbs": 76.9,
+      "fats": 0.1,
+      "iron": 1.4,
+      "calcium": 60,
+      "fiber": 14.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 25
+      },
+      {
+        "name": "1 Handful",
+        "grams": 10
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "sooji_halwa",
+    "name": "Sooji Halwa (Sheera)",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 285,
+      "protein": 3.5,
+      "carbs": 45,
+      "fats": 10.5,
+      "iron": 1.2,
+      "calcium": 22,
+      "fiber": 1,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "1 Tablespoon",
+        "grams": 20
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "kheer",
+    "name": "Kheer (Rice Pudding)",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 125,
+      "protein": 3.2,
+      "carbs": 19.5,
+      "fats": 3.8,
+      "iron": 0.2,
+      "calcium": 110,
+      "fiber": 0.2,
+      "vitamin_b12": 0.35,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
   }
 ];
 
