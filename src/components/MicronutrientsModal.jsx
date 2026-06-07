@@ -4,31 +4,33 @@ export const MicronutrientsModal = ({ isOpen, onClose, micros }) => {
   if (!isOpen || !micros) return null;
 
   const renderProgressBar = (label, data, unit = "mg") => {
-    const { consumed, target, status } = data;
+    if (!data) return null;
+    const { consumed = 0, target = 0, status = "adequate" } = data;
     const progress = target > 0 ? Math.min((consumed / target) * 100, 100) : 0;
     
-    // Determine bar color based on status
-    let barColor = "bg-primary";
-    if (status === "low") barColor = "bg-tertiary";
-    if (status === "high") barColor = "bg-error"; // Maybe high iron is bad, high fiber is fine, but we'll use a standard warning color or just primary
-    
-    // For some nutrients, high is fine (like Vitamin C), so let's stick to primary if adequate/high, tertiary if low.
-    if (status === "adequate") barColor = "bg-primary";
-    else if (status === "low") barColor = "bg-tertiary";
-    else barColor = "bg-secondary"; // "high"
+    let barColor = "#006e2f"; // primary
+    if (status === "low") barColor = "#b91a24"; // tertiary
+    else if (status === "high") barColor = "#855300"; // secondary
 
     return (
-      <div className="mb-4 last:mb-0">
-        <div className="flex justify-between items-end mb-1">
-          <span className="font-label-md text-on-surface capitalize">{label.replace("_", " ")}</span>
-          <span className="font-label-sm text-on-surface-variant">
+      <div style={{ marginBottom: "16px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "4px" }}>
+          <span className="font-label-md text-on-surface" style={{ textTransform: "capitalize" }}>
+            {label.replace("_", " ")}
+          </span>
+          <span className="text-caption text-on-surface-variant">
             {consumed} / {target} {unit}
           </span>
         </div>
-        <div className="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+        <div style={{ height: "8px", width: "100%", backgroundColor: "#dce2f3", borderRadius: "9999px", overflow: "hidden" }}>
           <div 
-            className={`h-full ${barColor} transition-all duration-500 ease-out`} 
-            style={{ width: `${progress}%` }} 
+            style={{ 
+              height: "100%", 
+              width: `${progress}%`, 
+              backgroundColor: barColor, 
+              borderRadius: "9999px",
+              transition: "width 0.5s ease-out" 
+            }} 
           />
         </div>
       </div>
@@ -36,31 +38,63 @@ export const MicronutrientsModal = ({ isOpen, onClose, micros }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-md animate-fade-in">
-      <div className="bg-surface w-full max-w-sm rounded-3xl shadow-elevation-high overflow-hidden animate-slide-up">
-        <div className="p-lg bg-surface-container-lowest">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="font-headline-sm text-headline-sm text-on-surface">Micronutrients</h2>
-            <button 
-              onClick={onClose}
-              className="w-8 h-8 flex items-center justify-center bg-surface-variant rounded-full text-on-surface-variant hover:text-on-surface transition-colors"
-            >
-              <span className="material-symbols-outlined text-[20px]">close</span>
-            </button>
-          </div>
-          
-          <div className="space-y-sm">
-            {micros.iron && renderProgressBar("Iron", micros.iron, "mg")}
-            {micros.calcium && renderProgressBar("Calcium", micros.calcium, "mg")}
-            {micros.fiber && renderProgressBar("Fiber", micros.fiber, "g")}
-            {micros.vitamin_c && renderProgressBar("Vitamin C", micros.vitamin_c, "mg")}
-            {micros.vitamin_b12 && renderProgressBar("Vitamin B12", micros.vitamin_b12, "µg")}
-            {(!micros.iron && !micros.calcium && !micros.fiber) && (
-              <p className="text-body-md text-on-surface-variant text-center py-md">
-                No micronutrient data available yet. Try re-saving your goals.
-              </p>
-            )}
-          </div>
+    <div 
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 50,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0,0,0,0.4)",
+        backdropFilter: "blur(4px)",
+        padding: "16px"
+      }}
+    >
+      <div 
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          backgroundColor: "#ffffff",
+          width: "100%",
+          maxWidth: "380px",
+          borderRadius: "24px",
+          overflow: "hidden",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+          padding: "24px"
+        }}
+      >
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
+          <h2 className="font-headline-md text-headline-md text-on-surface">Micronutrients</h2>
+          <button 
+            onClick={onClose}
+            style={{
+              width: "32px",
+              height: "32px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#dce2f3",
+              borderRadius: "50%",
+              border: "none",
+              cursor: "pointer"
+            }}
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: "20px", color: "#3d4a3d" }}>close</span>
+          </button>
+        </div>
+        
+        <div>
+          {renderProgressBar("Iron", micros.iron, "mg")}
+          {renderProgressBar("Calcium", micros.calcium, "mg")}
+          {renderProgressBar("Fiber", micros.fiber, "g")}
+          {renderProgressBar("Vitamin C", micros.vitamin_c, "mg")}
+          {renderProgressBar("Vitamin B12", micros.vitamin_b12, "µg")}
+          {(!micros.iron && !micros.calcium && !micros.fiber) && (
+            <p className="text-body-md text-on-surface-variant" style={{ textAlign: "center", padding: "16px 0" }}>
+              No micronutrient data available yet. Try re-saving your goals.
+            </p>
+          )}
         </div>
       </div>
     </div>

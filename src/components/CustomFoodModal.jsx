@@ -19,7 +19,6 @@ export const CustomFoodModal = ({ isOpen, onClose, onFoodAdded }) => {
 
     setIsSubmitting(true);
     
-    // Construct the standard food object schema
     const customFoodData = {
       name: name,
       category: "Custom Food",
@@ -56,97 +55,160 @@ export const CustomFoodModal = ({ isOpen, onClose, onFoodAdded }) => {
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-md animate-fade-in">
-      <div className="bg-surface w-full max-w-sm rounded-3xl shadow-elevation-high overflow-hidden animate-slide-up">
-        <div className="p-lg bg-surface-container-lowest">
-          <h2 className="font-headline-sm text-headline-sm text-on-surface mb-2">Create Custom Food</h2>
-          <p className="text-body-md text-on-surface-variant mb-6">
-            Add a specific packaged food or custom meal.
-          </p>
+  const inputStyle = {
+    width: "100%",
+    backgroundColor: "#e7eefe",
+    border: "1px solid rgba(188,203,185,0.3)",
+    borderRadius: "12px",
+    padding: "12px",
+    fontSize: "16px",
+    color: "#151c27",
+    outline: "none",
+    boxSizing: "border-box"
+  };
 
-          <form onSubmit={handleSubmit} className="space-y-md">
+  const labelStyle = {
+    display: "block",
+    fontSize: "12px",
+    fontWeight: 600,
+    color: "#3d4a3d",
+    marginBottom: "4px"
+  };
+
+  return (
+    <div 
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 50,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0,0,0,0.4)",
+        backdropFilter: "blur(4px)",
+        padding: "16px"
+      }}
+    >
+      <div 
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          backgroundColor: "#ffffff",
+          width: "100%",
+          maxWidth: "380px",
+          borderRadius: "24px",
+          overflow: "hidden",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+          padding: "24px"
+        }}
+      >
+        <h2 className="font-headline-md text-headline-md text-on-surface" style={{ marginBottom: "8px" }}>Create Custom Food</h2>
+        <p className="text-body-md text-on-surface-variant" style={{ marginBottom: "24px" }}>
+          Add a specific packaged food or custom meal.
+        </p>
+
+        <form onSubmit={handleSubmit}>
+          <div style={{ marginBottom: "16px" }}>
+            <label style={labelStyle}>Food Name *</label>
+            <input
+              type="text"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="e.g. Protein Bar"
+              style={inputStyle}
+            />
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "16px" }}>
             <div>
-              <label className="block text-label-sm font-label-sm text-on-surface-variant mb-1">Food Name *</label>
+              <label style={labelStyle}>Calories *</label>
               <input
-                type="text"
+                type="number"
                 required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. Protein Bar"
-                className="w-full bg-surface-container border border-outline-variant/30 rounded-xl p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none transition-shadow"
+                min="0"
+                value={calories}
+                onChange={(e) => setCalories(e.target.value)}
+                placeholder="kcal"
+                style={inputStyle}
               />
             </div>
-            
-            <div className="grid grid-cols-2 gap-md">
-              <div>
-                <label className="block text-label-sm font-label-sm text-on-surface-variant mb-1">Calories *</label>
-                <input
-                  type="number"
-                  required
-                  min="0"
-                  value={calories}
-                  onChange={(e) => setCalories(e.target.value)}
-                  placeholder="kcal"
-                  className="w-full bg-surface-container border border-outline-variant/30 rounded-xl p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none transition-shadow"
-                />
-              </div>
-              <div>
-                <label className="block text-label-sm font-label-sm text-on-surface-variant mb-1">Protein (g)</label>
-                <input
-                  type="number"
-                  min="0"
-                  step="0.1"
-                  value={protein}
-                  onChange={(e) => setProtein(e.target.value)}
-                  placeholder="g"
-                  className="w-full bg-surface-container border border-outline-variant/30 rounded-xl p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none transition-shadow"
-                />
-              </div>
-              <div>
-                <label className="block text-label-sm font-label-sm text-on-surface-variant mb-1">Carbs (g)</label>
-                <input
-                  type="number"
-                  min="0"
-                  step="0.1"
-                  value={carbs}
-                  onChange={(e) => setCarbs(e.target.value)}
-                  placeholder="g"
-                  className="w-full bg-surface-container border border-outline-variant/30 rounded-xl p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none transition-shadow"
-                />
-              </div>
-              <div>
-                <label className="block text-label-sm font-label-sm text-on-surface-variant mb-1">Fats (g)</label>
-                <input
-                  type="number"
-                  min="0"
-                  step="0.1"
-                  value={fats}
-                  onChange={(e) => setFats(e.target.value)}
-                  placeholder="g"
-                  className="w-full bg-surface-container border border-outline-variant/30 rounded-xl p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none transition-shadow"
-                />
-              </div>
+            <div>
+              <label style={labelStyle}>Protein (g)</label>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                value={protein}
+                onChange={(e) => setProtein(e.target.value)}
+                placeholder="g"
+                style={inputStyle}
+              />
             </div>
+            <div>
+              <label style={labelStyle}>Carbs (g)</label>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                value={carbs}
+                onChange={(e) => setCarbs(e.target.value)}
+                placeholder="g"
+                style={inputStyle}
+              />
+            </div>
+            <div>
+              <label style={labelStyle}>Fats (g)</label>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                value={fats}
+                onChange={(e) => setFats(e.target.value)}
+                placeholder="g"
+                style={inputStyle}
+              />
+            </div>
+          </div>
 
-            <div className="pt-4 flex gap-3">
-              <button
-                type="button"
-                onClick={onClose}
-                className="flex-1 py-3 px-4 rounded-full font-label-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="flex-1 py-3 px-4 rounded-full font-label-lg bg-primary text-on-primary hover:bg-primary/90 transition-colors disabled:opacity-50"
-              >
-                {isSubmitting ? "Adding..." : "Add Food"}
-              </button>
-            </div>
-          </form>
-        </div>
+          <div style={{ display: "flex", gap: "12px", paddingTop: "8px" }}>
+            <button
+              type="button"
+              onClick={onClose}
+              style={{
+                flex: 1,
+                padding: "12px 16px",
+                borderRadius: "9999px",
+                fontWeight: 600,
+                fontSize: "14px",
+                backgroundColor: "#e7eefe",
+                color: "#151c27",
+                border: "none",
+                cursor: "pointer"
+              }}
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              style={{
+                flex: 1,
+                padding: "12px 16px",
+                borderRadius: "9999px",
+                fontWeight: 600,
+                fontSize: "14px",
+                backgroundColor: "#006e2f",
+                color: "#ffffff",
+                border: "none",
+                cursor: "pointer",
+                opacity: isSubmitting ? 0.5 : 1
+              }}
+            >
+              {isSubmitting ? "Adding..." : "Add Food"}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
