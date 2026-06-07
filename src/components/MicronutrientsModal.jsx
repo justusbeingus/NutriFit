@@ -50,11 +50,16 @@ export const MicronutrientsModal = ({ isOpen, onClose, micros }) => {
           </div>
           
           <div className="space-y-sm">
-            {renderProgressBar("Iron", micros.iron, "mg")}
-            {renderProgressBar("Calcium", micros.calcium, "mg")}
-            {renderProgressBar("Fiber", micros.fiber, "g")}
-            {renderProgressBar("Vitamin C", micros.vitamin_c, "mg")}
-            {renderProgressBar("Vitamin B12", micros.vitamin_b12, "µg")}
+            {micros.iron && renderProgressBar("Iron", micros.iron, "mg")}
+            {micros.calcium && renderProgressBar("Calcium", micros.calcium, "mg")}
+            {micros.fiber && renderProgressBar("Fiber", micros.fiber, "g")}
+            {micros.vitamin_c && renderProgressBar("Vitamin C", micros.vitamin_c, "mg")}
+            {micros.vitamin_b12 && renderProgressBar("Vitamin B12", micros.vitamin_b12, "µg")}
+            {(!micros.iron && !micros.calcium && !micros.fiber) && (
+              <p className="text-body-md text-on-surface-variant text-center py-md">
+                No micronutrient data available yet. Try re-saving your goals.
+              </p>
+            )}
           </div>
         </div>
       </div>

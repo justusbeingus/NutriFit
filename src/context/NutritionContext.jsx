@@ -149,31 +149,33 @@ export const NutritionProvider = ({ children }) => {
       return "high";
     };
 
+    const mt = currentProfile.micronutrient_targets || {};
+
     const micros = {
       iron: {
         consumed: rawSummary.iron_consumed || 0,
-        target: currentProfile.micronutrient_targets.iron,
-        status: checkStatus(rawSummary.iron_consumed || 0, currentProfile.micronutrient_targets.iron)
+        target: mt.iron || 0,
+        status: checkStatus(rawSummary.iron_consumed || 0, mt.iron)
       },
       calcium: {
         consumed: rawSummary.calcium_consumed || 0,
-        target: currentProfile.micronutrient_targets.calcium,
-        status: checkStatus(rawSummary.calcium_consumed || 0, currentProfile.micronutrient_targets.calcium)
+        target: mt.calcium || 0,
+        status: checkStatus(rawSummary.calcium_consumed || 0, mt.calcium)
       },
       fiber: {
         consumed: rawSummary.fiber_consumed || 0,
-        target: currentProfile.micronutrient_targets.fiber,
-        status: checkStatus(rawSummary.fiber_consumed || 0, currentProfile.micronutrient_targets.fiber)
+        target: mt.fiber || 0,
+        status: checkStatus(rawSummary.fiber_consumed || 0, mt.fiber)
       },
       vitamin_b12: {
         consumed: rawSummary.vitamin_b12_consumed || 0,
-        target: currentProfile.micronutrient_targets.vitamin_b12,
-        status: checkStatus(rawSummary.vitamin_b12_consumed || 0, currentProfile.micronutrient_targets.vitamin_b12)
+        target: mt.vitamin_b12 || 0,
+        status: checkStatus(rawSummary.vitamin_b12_consumed || 0, mt.vitamin_b12)
       },
       vitamin_c: {
         consumed: rawSummary.vitamin_c_consumed || 0,
-        target: currentProfile.micronutrient_targets.vitamin_c,
-        status: checkStatus(rawSummary.vitamin_c_consumed || 0, currentProfile.micronutrient_targets.vitamin_c)
+        target: mt.vitamin_c || 0,
+        status: checkStatus(rawSummary.vitamin_c_consumed || 0, mt.vitamin_c)
       }
     };
 
