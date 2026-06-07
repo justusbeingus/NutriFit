@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNutrition } from "../context/NutritionContext";
-import { TopAppBar } from "../components/TopAppBar";
-import { BottomNav } from "../components/BottomNav";
 import { MicronutrientsModal } from "../components/MicronutrientsModal";
 
 export const Dashboard = ({ onAddMealClick }) => {
