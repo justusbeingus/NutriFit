@@ -39,7 +39,7 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
       const results = searchFoods(searchQuery, customFoods);
       setSearchResults(results);
     }
-  }, [searchQuery]);
+  }, [searchQuery, customFoods]);
 
   // Select a food item
   const handleSelectFood = (food) => {

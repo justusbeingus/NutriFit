@@ -50,8 +50,13 @@ export const NutritionProvider = ({ children }) => {
           if (isMounted) {
             // A profile might just be the initial schema if they haven't run setup
             setProfile(userProfile.calorie_target ? userProfile : null); 
-            const userCustomFoods = await dbGetUserCustomFoods(user.uid);
-            setCustomFoods(userCustomFoods);
+            // Fetch custom foods separately so it can't block the critical path
+            try {
+              const userCustomFoods = await dbGetUserCustomFoods(user.uid);
+              if (isMounted) setCustomFoods(userCustomFoods);
+            } catch (cfError) {
+              console.warn("Could not load custom foods:", cfError);
+            }
             await fetchDataForDate(user.uid, selectedDate, userProfile);
           }
         } catch (error) {

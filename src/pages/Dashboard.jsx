@@ -276,7 +276,7 @@ export const Dashboard = ({ onAddMealClick }) => {
       <MicronutrientsModal 
         isOpen={isMicrosModalOpen} 
         onClose={() => setIsMicrosModalOpen(false)} 
-        micros={dailySummary?.detailedSummary?.micros}
+        micros={dailySummary?.micros}
       />
     </div>
   );
