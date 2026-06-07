@@ -589,6 +589,512 @@ export const foodDatabase = [
       { name: "1 Bowl", grams: 200 },
       { name: "100 grams", grams: 100 }
     ]
+  },
+  {
+    id: "masala_dosa",
+    name: "Masala Dosa (with Potato Filling)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 175,
+      protein: 3.5,
+      carbs: 29.0,
+      fats: 5.0,
+      iron: 1.0,
+      calcium: 15.0,
+      fiber: 1.8,
+      vitamin_b12: 0.0,
+      vitamin_c: 1.0
+    },
+    portions: [
+      { name: "1 Medium Dosa", grams: 120 },
+      { name: "1 Large Dosa", grams: 180 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "plain_dosa",
+    name: "Plain Dosa",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 160,
+      protein: 3.0,
+      carbs: 32.0,
+      fats: 2.0,
+      iron: 0.8,
+      calcium: 12.0,
+      fiber: 1.2,
+      vitamin_b12: 0.0,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Medium Dosa", grams: 80 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "poha",
+    name: "Poha (Cooked Flattened Rice)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 180,
+      protein: 2.8,
+      carbs: 33.0,
+      fats: 4.0,
+      iron: 2.5,
+      calcium: 20.0,
+      fiber: 1.5,
+      vitamin_b12: 0.0,
+      vitamin_c: 2.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 150 },
+      { name: "1 Plate", grams: 250 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "upma",
+    name: "Upma (Semolina Porridge)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 150,
+      protein: 3.2,
+      carbs: 25.0,
+      fats: 4.5,
+      iron: 1.2,
+      calcium: 15.0,
+      fiber: 1.6,
+      vitamin_b12: 0.0,
+      vitamin_c: 1.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "aloo_paratha",
+    name: "Aloo Paratha (Griddle Flatbread with Potato)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 290,
+      protein: 5.5,
+      carbs: 45.0,
+      fats: 10.0,
+      iron: 2.2,
+      calcium: 30.0,
+      fiber: 4.5,
+      vitamin_b12: 0.0,
+      vitamin_c: 4.0
+    },
+    portions: [
+      { name: "1 Medium Paratha", grams: 110 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "paneer_paratha",
+    name: "Paneer Paratha (Griddle Flatbread with Cottage Cheese)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 310,
+      protein: 11.0,
+      carbs: 38.0,
+      fats: 12.0,
+      iron: 2.0,
+      calcium: 180.0,
+      fiber: 4.0,
+      vitamin_b12: 0.3,
+      vitamin_c: 1.0
+    },
+    portions: [
+      { name: "1 Medium Paratha", grams: 110 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "egg_omelette",
+    name: "Egg Omelette (2 Eggs with cooking oil)",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 210,
+      protein: 13.0,
+      carbs: 1.0,
+      fats: 17.0,
+      iron: 1.6,
+      calcium: 60.0,
+      fiber: 0.0,
+      vitamin_b12: 1.2,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Omelette (2 Eggs)", grams: 110 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "egg_bhurji",
+    name: "Egg Bhurji (Indian Scrambled Eggs)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 190,
+      protein: 11.5,
+      carbs: 3.5,
+      fats: 14.5,
+      iron: 1.5,
+      calcium: 55.0,
+      fiber: 0.5,
+      vitamin_b12: 1.0,
+      vitamin_c: 2.0
+    },
+    portions: [
+      { name: "1 Plate", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "paneer_bhurji",
+    name: "Paneer Bhurji (Scrambled Cottage Cheese)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 220,
+      protein: 14.0,
+      carbs: 5.0,
+      fats: 16.0,
+      iron: 1.2,
+      calcium: 350.0,
+      fiber: 0.8,
+      vitamin_b12: 0.6,
+      vitamin_c: 3.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "chicken_curry",
+    name: "Chicken Curry (with Gravy)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 150,
+      protein: 16.5,
+      carbs: 3.5,
+      fats: 8.0,
+      iron: 1.1,
+      calcium: 20.0,
+      fiber: 0.8,
+      vitamin_b12: 0.3,
+      vitamin_c: 1.5
+    },
+    portions: [
+      { name: "1 Bowl", grams: 200 },
+      { name: "1 Piece with Gravy", grams: 75 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "brown_rice",
+    name: "Cooked Brown Rice",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 111,
+      protein: 2.6,
+      carbs: 23.0,
+      fats: 0.9,
+      iron: 0.5,
+      calcium: 10.0,
+      fiber: 1.8,
+      vitamin_b12: 0.0,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Bowl / Cup", grams: 150 },
+      { name: "1 Plate", grams: 250 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "quinoa",
+    name: "Cooked Quinoa",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 120,
+      protein: 4.4,
+      carbs: 21.3,
+      fats: 1.9,
+      iron: 1.5,
+      calcium: 17.0,
+      fiber: 2.8,
+      vitamin_b12: 0.0,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Bowl / Cup", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "moong_dal_chilla",
+    name: "Moong Dal Chilla (Lentil Crepe)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 180,
+      protein: 9.5,
+      carbs: 26.0,
+      fats: 4.5,
+      iron: 3.2,
+      calcium: 40.0,
+      fiber: 4.8,
+      vitamin_b12: 0.0,
+      vitamin_c: 1.5
+    },
+    portions: [
+      { name: "1 Chilla (Medium)", grams: 75 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "mixed_green_salad",
+    name: "Mixed Green Salad (Raw Cucumber, Tomato, Onion)",
+    category: "Fruits",
+    nutrition_per_100g: {
+      calories: 25,
+      protein: 1.2,
+      carbs: 4.0,
+      fats: 0.3,
+      iron: 1.0,
+      calcium: 35.0,
+      fiber: 2.0,
+      vitamin_b12: 0.0,
+      vitamin_c: 12.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "sweet_potato",
+    name: "Sweet Potato (Boiled / Baked)",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 86,
+      protein: 1.6,
+      carbs: 20.0,
+      fats: 0.1,
+      iron: 0.6,
+      calcium: 30.0,
+      fiber: 3.0,
+      vitamin_b12: 0.0,
+      vitamin_c: 2.4
+    },
+    portions: [
+      { name: "1 Medium", grams: 130 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "broccoli",
+    name: "Broccoli (Steamed / Boiled)",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 35,
+      protein: 2.4,
+      carbs: 7.2,
+      fats: 0.4,
+      iron: 0.7,
+      calcium: 40.0,
+      fiber: 3.3,
+      vitamin_b12: 0.0,
+      vitamin_c: 65.0
+    },
+    portions: [
+      { name: "1 Cup", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "avocado",
+    name: "Avocado",
+    category: "Fruits",
+    nutrition_per_100g: {
+      calories: 160,
+      protein: 2.0,
+      carbs: 8.5,
+      fats: 14.7,
+      iron: 0.6,
+      calcium: 12.0,
+      fiber: 6.7,
+      vitamin_b12: 0.0,
+      vitamin_c: 10.0
+    },
+    portions: [
+      { name: "1 Medium Fruit", grams: 150 },
+      { name: "Half Avocado", grams: 75 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "black_coffee",
+    name: "Black Coffee (No Sugar)",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 2,
+      protein: 0.1,
+      carbs: 0.0,
+      fats: 0.0,
+      iron: 0.0,
+      calcium: 2.0,
+      fiber: 0.0,
+      vitamin_b12: 0.0,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Cup", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "greek_yogurt",
+    name: "Greek Yogurt (Plain, Low Fat)",
+    category: "Dairy",
+    nutrition_per_100g: {
+      calories: 73,
+      protein: 10.0,
+      carbs: 3.6,
+      fats: 2.0,
+      iron: 0.1,
+      calcium: 110.0,
+      fiber: 0.0,
+      vitamin_b12: 0.75,
+      vitamin_c: 0.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 150 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "fish_curry",
+    name: "Fish Curry (Indian White Fish)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 110,
+      protein: 14.0,
+      carbs: 2.5,
+      fats: 5.0,
+      iron: 0.8,
+      calcium: 25.0,
+      fiber: 0.5,
+      vitamin_b12: 1.5,
+      vitamin_c: 1.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 200 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "samosa",
+    name: "Samosa (Potato Filled, Fried)",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 300,
+      protein: 4.5,
+      carbs: 32.0,
+      fats: 17.0,
+      iron: 1.5,
+      calcium: 20.0,
+      fiber: 2.0,
+      vitamin_b12: 0.0,
+      vitamin_c: 2.0
+    },
+    portions: [
+      { name: "1 Medium Samosa", grams: 50 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "vegetable_pizza",
+    name: "Vegetable Pizza (Thick/Medium Crust)",
+    category: "Global",
+    nutrition_per_100g: {
+      calories: 240,
+      protein: 10.0,
+      carbs: 28.0,
+      fats: 9.5,
+      iron: 1.8,
+      calcium: 180.0,
+      fiber: 2.2,
+      vitamin_b12: 0.4,
+      vitamin_c: 4.0
+    },
+    portions: [
+      { name: "1 Slice (Large)", grams: 100 },
+      { name: "1 Personal Pizza", grams: 300 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "orange",
+    name: "Orange (Fresh)",
+    category: "Fruits",
+    nutrition_per_100g: {
+      calories: 47,
+      protein: 0.9,
+      carbs: 12.0,
+      fats: 0.1,
+      iron: 0.1,
+      calcium: 40.0,
+      fiber: 2.4,
+      vitamin_b12: 0.0,
+      vitamin_c: 53.2
+    },
+    portions: [
+      { name: "1 Medium Orange", grams: 130 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "watermelon",
+    name: "Watermelon (Fresh)",
+    category: "Fruits",
+    nutrition_per_100g: {
+      calories: 30,
+      protein: 0.6,
+      carbs: 7.6,
+      fats: 0.1,
+      iron: 0.2,
+      calcium: 7.0,
+      fiber: 0.4,
+      vitamin_b12: 0.0,
+      vitamin_c: 8.1
+    },
+    portions: [
+      { name: "1 Bowl / Slice", grams: 200 },
+      { name: "100 grams", grams: 100 }
+    ]
+  },
+  {
+    id: "soya_chunks_curry",
+    name: "Soya Chunks Curry",
+    category: "Indian",
+    nutrition_per_100g: {
+      calories: 120,
+      protein: 15.0,
+      carbs: 8.0,
+      fats: 3.5,
+      iron: 4.5,
+      calcium: 70.0,
+      fiber: 4.0,
+      vitamin_b12: 0.0,
+      vitamin_c: 1.0
+    },
+    portions: [
+      { name: "1 Bowl", grams: 180 },
+      { name: "100 grams", grams: 100 }
+    ]
   }
 ];
 
