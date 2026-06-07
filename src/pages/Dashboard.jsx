@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNutrition } from "../context/NutritionContext";
+import { TopAppBar } from "../components/TopAppBar";
+import { BottomNav } from "../components/BottomNav";
+import { MicronutrientsModal } from "../components/MicronutrientsModal";
 
 export const Dashboard = ({ onAddMealClick }) => {
   const { dailySummary, deleteMealLog } = useNutrition();
+  const [isMicrosModalOpen, setIsMicrosModalOpen] = useState(false);
 
   if (!dailySummary) {
     return (
@@ -134,6 +138,23 @@ export const Dashboard = ({ onAddMealClick }) => {
         </div>
       </section>
 
+      {/* 1.5. Micronutrient Insights Card */}
+      <section>
+        <button 
+          onClick={() => setIsMicrosModalOpen(true)}
+          className="w-full bg-primary-container text-on-primary-container p-md rounded-2xl flex items-center justify-between shadow-soft hover:bg-primary-container/90 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-[24px]">vital_signs</span>
+            <div className="text-left">
+              <h3 className="font-label-lg font-semibold">Micronutrient Insights</h3>
+              <p className="font-caption text-caption opacity-80">View your daily vitamins and minerals</p>
+            </div>
+          </div>
+          <span className="material-symbols-outlined">chevron_right</span>
+        </button>
+      </section>
+
       {/* 2. Warnings Alerts Section */}
       {alerts.length > 0 && (
         <section className="space-y-sm">
@@ -253,6 +274,12 @@ export const Dashboard = ({ onAddMealClick }) => {
       >
         <span className="material-symbols-outlined text-[32px]">add</span>
       </button>
+
+      <MicronutrientsModal 
+        isOpen={isMicrosModalOpen} 
+        onClose={() => setIsMicrosModalOpen(false)} 
+        micros={dailySummary?.detailedSummary?.micros}
+      />
     </div>
   );
 };

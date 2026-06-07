@@ -125,12 +125,38 @@ export const saveGoalProfile = async (uid, weight, targetWeight, activityLevel, 
 };
 
 // -----------------------------------------------------------------------------
+// CUSTOM FOODS
+// -----------------------------------------------------------------------------
+
+export const addCustomFood = async (uid, customFoodData) => {
+  const customFoodsRef = collection(db, "users", uid, "custom_foods");
+  const docRef = await addDoc(customFoodsRef, {
+    ...customFoodData,
+    created_at: new Date().toISOString()
+  });
+  return { id: docRef.id, ...customFoodData };
+};
+
+export const getUserCustomFoods = async (uid) => {
+  const customFoodsRef = collection(db, "users", uid, "custom_foods");
+  const q = query(customFoodsRef);
+  const snapshot = await getDocs(q);
+  const foods = [];
+  snapshot.forEach(doc => {
+    foods.push({ id: doc.id, ...doc.data() });
+  });
+  return foods;
+};
+
+// -----------------------------------------------------------------------------
 // MEAL LOGGING & DAILY SUMMARIES
 // -----------------------------------------------------------------------------
 
-export const saveMeal = async (uid, foodId, portionName, quantity, mealType, dateStr) => {
-  const food = foodDatabase.find(f => f.id === foodId);
+
+export const saveMeal = async (uid, foodId, portionName, quantity, mealType, dateStr, customFood = null) => {
+  const food = customFood || foodDatabase.find(f => f.id === foodId);
   if (!food) throw new Error("Food item not found");
+
 
   const portion = food.portions.find(p => p.name === portionName) || { grams: 100 };
   const totalGrams = portion.grams * quantity;

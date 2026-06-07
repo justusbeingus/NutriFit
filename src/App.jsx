@@ -67,6 +67,8 @@ function MainAppContent() {
         return <MealHistory />;
       case "workouts":
         return <Workouts />;
+      case "goal_setup":
+        return <GoalSetup onComplete={() => setActiveTab("dashboard")} isEditing={true} />;
       default:
         return <Dashboard onAddMealClick={handleTriggerAddMealTab} />;
     }
@@ -77,7 +79,10 @@ function MainAppContent() {
       {/* Wrapper to enforce a modern app viewport width constraints on desktop */}
       <div className="w-full max-w-[28rem] bg-surface min-h-screen relative shadow-2xl pb-[env(safe-area-inset-bottom)]">
         {/* Shared Top Bar header */}
-        <TopAppBar onTitleClick={() => setActiveTab("dashboard")} />
+        <TopAppBar 
+          onTitleClick={() => setActiveTab("dashboard")} 
+          onNavigate={(tab) => setActiveTab(tab)}
+        />
 
         {/* Scrollable Main viewport */}
         <main className="px-container-padding pt-xs">

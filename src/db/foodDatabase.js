@@ -4841,11 +4841,35 @@ export const foodDatabase = [
 export const getFoodById = (id) => foodDatabase.find(food => food.id === id);
 
 // Helper to search foods by query
-export const searchFoods = (query) => {
+export const searchFoods = (query, customFoods = []) => {
   if (!query) return [];
   const normalizedQuery = query.toLowerCase().trim();
-  return foodDatabase.filter(food => 
+  
+  // Combine databases for search
+  const combinedDB = [...customFoods, ...foodDatabase];
+  
+  const results = combinedDB.filter(food => 
     food.name.toLowerCase().includes(normalizedQuery) ||
     food.category.toLowerCase().includes(normalizedQuery)
   );
+
+  // Score and sort results
+  return results.sort((a, b) => {
+    const aName = a.name.toLowerCase();
+    const bName = b.name.toLowerCase();
+    
+    // Score A
+    let aScore = 0;
+    if (aName === normalizedQuery) aScore = 3;
+    else if (aName.startsWith(normalizedQuery)) aScore = 2;
+    else if (aName.includes(normalizedQuery)) aScore = 1;
+    
+    // Score B
+    let bScore = 0;
+    if (bName === normalizedQuery) bScore = 3;
+    else if (bName.startsWith(normalizedQuery)) bScore = 2;
+    else if (bName.includes(normalizedQuery)) bScore = 1;
+    
+    return bScore - aScore;
+  });
 };

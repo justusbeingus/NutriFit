@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNutrition } from "../context/NutritionContext";
 import { searchFoods, foodDatabase } from "../db/foodDatabase";
+import { CustomFoodModal } from "../components/CustomFoodModal";
 
 export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
-  const { addMealLog } = useNutrition();
+  const { addMealLog, customFoods } = useNutrition();
+
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
 
   const [mealType, setMealType] = useState(defaultMealType);
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,7 +36,7 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
     if (searchQuery.trim() === "") {
       setSearchResults([]);
     } else {
-      const results = searchFoods(searchQuery);
+      const results = searchFoods(searchQuery, customFoods);
       setSearchResults(results);
     }
   }, [searchQuery]);
@@ -61,7 +64,8 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
   // Log meal transaction
   const handleAddMeal = () => {
     if (!selectedFood) return;
-    addMealLog(selectedFood.id, portionName, quantity, mealType);
+    const isCustom = customFoods.some(cf => cf.id === selectedFood.id);
+    addMealLog(selectedFood.id, portionName, quantity, mealType, isCustom ? selectedFood : null);
     
     // Reset and notify parent
     setSelectedFood(null);
@@ -142,6 +146,19 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
                 </span>
               </button>
             ))}
+          </div>
+        )}
+
+        {/* Add Custom Food Button */}
+        {!selectedFood && searchQuery.trim() === "" && (
+          <div className="mt-sm">
+            <button
+              onClick={() => setIsCustomModalOpen(true)}
+              className="flex items-center gap-2 text-primary font-label-md hover:bg-primary/10 px-sm py-1 rounded-lg transition-colors"
+            >
+              <span className="material-symbols-outlined text-[18px]">add</span>
+              Add Custom Food
+            </button>
           </div>
         )}
       </section>
@@ -290,6 +307,12 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
           </button>
         </div>
       )}
+      {/* Custom Food Modal */}
+      <CustomFoodModal 
+        isOpen={isCustomModalOpen} 
+        onClose={() => setIsCustomModalOpen(false)}
+        onFoodAdded={(food) => handleSelectFood(food)}
+      />
     </div>
   );
 };

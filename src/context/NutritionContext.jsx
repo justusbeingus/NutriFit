@@ -6,7 +6,9 @@ import {
   saveMeal as dbSaveMeal,
   deleteMeal as dbDeleteMeal,
   getDailySummary as dbGetDailySummary,
-  getUserMeals as dbGetUserMeals
+  getUserMeals as dbGetUserMeals,
+  addCustomFood as dbAddCustomFood,
+  getUserCustomFoods as dbGetUserCustomFoods
 } from "../db/firebaseService";
 
 const NutritionContext = createContext(null);
@@ -18,6 +20,7 @@ export const NutritionProvider = ({ children }) => {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split("T")[0]);
   const [dailySummary, setDailySummary] = useState(null);
   const [dailyMeals, setDailyMeals] = useState([]);
+  const [customFoods, setCustomFoods] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // Core Data Fetcher
@@ -47,6 +50,8 @@ export const NutritionProvider = ({ children }) => {
           if (isMounted) {
             // A profile might just be the initial schema if they haven't run setup
             setProfile(userProfile.calorie_target ? userProfile : null); 
+            const userCustomFoods = await dbGetUserCustomFoods(user.uid);
+            setCustomFoods(userCustomFoods);
             await fetchDataForDate(user.uid, selectedDate, userProfile);
           }
         } catch (error) {
@@ -60,6 +65,7 @@ export const NutritionProvider = ({ children }) => {
           setProfile(null);
           setDailySummary(null);
           setDailyMeals([]);
+          setCustomFoods([]);
           setIsLoading(false);
         }
       }
@@ -94,13 +100,25 @@ export const NutritionProvider = ({ children }) => {
     }
   };
 
-  const addMealLog = async (foodId, portionName, quantity, mealType) => {
+  const addMealLog = async (foodId, portionName, quantity, mealType, customFood = null) => {
     if (!user) return;
     try {
-      await dbSaveMeal(user.uid, foodId, portionName, quantity, mealType, selectedDate);
+      await dbSaveMeal(user.uid, foodId, portionName, quantity, mealType, selectedDate, customFood);
       await fetchDataForDate(user.uid, selectedDate, profile);
     } catch (error) {
       console.error("Failed to add meal:", error);
+    }
+  };
+
+  const addCustomFoodToDb = async (customFoodData) => {
+    if (!user) return;
+    try {
+      const newCustomFood = await dbAddCustomFood(user.uid, customFoodData);
+      setCustomFoods(prev => [...prev, newCustomFood]);
+      return newCustomFood;
+    } catch (error) {
+      console.error("Failed to add custom food:", error);
+      throw error;
     }
   };
 
@@ -182,10 +200,14 @@ export const NutritionProvider = ({ children }) => {
       selectedDate,
       setSelectedDate,
       dailySummary,
+      dailyMeals,
+      customFoods,
+      isLoading,
       saveGoalProfile,
       addMealLog,
+      addCustomFoodToDb,
       deleteMealLog,
-      isLoading
+      setDate: setSelectedDate
     }}>
       {children}
     </NutritionContext.Provider>
