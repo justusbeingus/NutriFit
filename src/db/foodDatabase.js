@@ -3358,6 +3358,1382 @@ export const foodDatabase = [
         "grams": 100
       }
     ]
+  },
+  {
+    "id": "kiwi",
+    "name": "Kiwi (Fresh)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 61,
+      "protein": 1.1,
+      "carbs": 14.7,
+      "fats": 0.5,
+      "iron": 0.3,
+      "calcium": 34,
+      "fiber": 3,
+      "vitamin_b12": 0,
+      "vitamin_c": 92.7
+    },
+    "portions": [
+      {
+        "name": "1 Medium Kiwi",
+        "grams": 75
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple (Fresh Chunks)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 50,
+      "protein": 0.5,
+      "carbs": 13.1,
+      "fats": 0.1,
+      "iron": 0.3,
+      "calcium": 13,
+      "fiber": 1.4,
+      "vitamin_b12": 0,
+      "vitamin_c": 47.8
+    },
+    "portions": [
+      {
+        "name": "1 Cup (Chunks)",
+        "grams": 165
+      },
+      {
+        "name": "1 Slice",
+        "grams": 85
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pomegranate_juice",
+    "name": "Pomegranate Juice (Fresh, Raw)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 54,
+      "protein": 0.2,
+      "carbs": 13.1,
+      "fats": 0.3,
+      "iron": 0.1,
+      "calcium": 11,
+      "fiber": 0.1,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.1
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "orange_juice",
+    "name": "Orange Juice (Fresh, Raw)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 45,
+      "protein": 0.7,
+      "carbs": 10.4,
+      "fats": 0.2,
+      "iron": 0.2,
+      "calcium": 11,
+      "fiber": 0.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 50
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "watermelon_juice",
+    "name": "Watermelon Juice (Fresh, Raw)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 30,
+      "protein": 0.4,
+      "carbs": 7.5,
+      "fats": 0.1,
+      "iron": 0.2,
+      "calcium": 7,
+      "fiber": 0.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 8.1
+    },
+    "portions": [
+      {
+        "name": "1 Glass",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "lemon_juice",
+    "name": "Lemon Juice (Freshly Squeezed)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein": 0.4,
+      "carbs": 6.9,
+      "fats": 0.2,
+      "iron": 0.1,
+      "calcium": 6,
+      "fiber": 0.3,
+      "vitamin_b12": 0,
+      "vitamin_c": 38.7
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 15
+      },
+      {
+        "name": "Juice of 1 Lemon",
+        "grams": 45
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "carrot_raw",
+    "name": "Carrot (Raw)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 41,
+      "protein": 0.9,
+      "carbs": 9.6,
+      "fats": 0.2,
+      "iron": 0.3,
+      "calcium": 33,
+      "fiber": 2.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 5.9
+    },
+    "portions": [
+      {
+        "name": "1 Medium Carrot",
+        "grams": 60
+      },
+      {
+        "name": "1 Cup (Chopped)",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "cucumber_raw",
+    "name": "Cucumber (Raw, Peeled)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 15,
+      "protein": 0.7,
+      "carbs": 3.6,
+      "fats": 0.1,
+      "iron": 0.3,
+      "calcium": 16,
+      "fiber": 0.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 2.8
+    },
+    "portions": [
+      {
+        "name": "1 Medium Cucumber",
+        "grams": 200
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "tomato_raw",
+    "name": "Tomato (Raw)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 18,
+      "protein": 0.9,
+      "carbs": 3.9,
+      "fats": 0.2,
+      "iron": 0.3,
+      "calcium": 10,
+      "fiber": 1.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 13.7
+    },
+    "portions": [
+      {
+        "name": "1 Medium Tomato",
+        "grams": 120
+      },
+      {
+        "name": "1 Small Tomato",
+        "grams": 80
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "onion_raw",
+    "name": "Onion (Raw)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 40,
+      "protein": 1.1,
+      "carbs": 9.3,
+      "fats": 0.1,
+      "iron": 0.2,
+      "calcium": 23,
+      "fiber": 1.7,
+      "vitamin_b12": 0,
+      "vitamin_c": 7.4
+    },
+    "portions": [
+      {
+        "name": "1 Medium Onion",
+        "grams": 110
+      },
+      {
+        "name": "1 Tablespoon (Chopped)",
+        "grams": 10
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "garlic_raw",
+    "name": "Garlic (Raw Cloves)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 149,
+      "protein": 6.4,
+      "carbs": 33.1,
+      "fats": 0.5,
+      "iron": 1.7,
+      "calcium": 181,
+      "fiber": 2.1,
+      "vitamin_b12": 0,
+      "vitamin_c": 31.2
+    },
+    "portions": [
+      {
+        "name": "1 Clove",
+        "grams": 3
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "ginger_raw",
+    "name": "Ginger (Raw Root)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 80,
+      "protein": 1.8,
+      "carbs": 17.8,
+      "fats": 0.8,
+      "iron": 0.6,
+      "calcium": 16,
+      "fiber": 2,
+      "vitamin_b12": 0,
+      "vitamin_c": 5
+    },
+    "portions": [
+      {
+        "name": "1 Slice (approx 1\")",
+        "grams": 5
+      },
+      {
+        "name": "1 Teaspoon (Grated)",
+        "grams": 3
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "green_chilli",
+    "name": "Green Chilli (Raw)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 40,
+      "protein": 2,
+      "carbs": 9,
+      "fats": 0.2,
+      "iron": 1,
+      "calcium": 18,
+      "fiber": 1.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 242
+    },
+    "portions": [
+      {
+        "name": "1 Chilli",
+        "grams": 5
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "coriander_leaves",
+    "name": "Coriander Leaves (Cilantro)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbs": 3.7,
+      "fats": 0.5,
+      "iron": 1.8,
+      "calcium": 67,
+      "fiber": 2.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 27
+    },
+    "portions": [
+      {
+        "name": "1 Handful",
+        "grams": 15
+      },
+      {
+        "name": "1 Tablespoon (Chopped)",
+        "grams": 3
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "mint_leaves",
+    "name": "Mint Leaves (Pudina)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 70,
+      "protein": 3.8,
+      "carbs": 14.8,
+      "fats": 0.9,
+      "iron": 5.1,
+      "calcium": 243,
+      "fiber": 8,
+      "vitamin_b12": 0,
+      "vitamin_c": 31.8
+    },
+    "portions": [
+      {
+        "name": "1 Handful",
+        "grams": 15
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "mushroom_raw",
+    "name": "Mushroom (Raw Button)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 22,
+      "protein": 3.1,
+      "carbs": 3.3,
+      "fats": 0.3,
+      "iron": 0.5,
+      "calcium": 3,
+      "fiber": 1,
+      "vitamin_b12": 0.04,
+      "vitamin_c": 2.1
+    },
+    "portions": [
+      {
+        "name": "1 Cup (Sliced)",
+        "grams": 70
+      },
+      {
+        "name": "1 Medium Mushroom",
+        "grams": 18
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "cauliflower_raw",
+    "name": "Cauliflower (Raw Gobi)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 25,
+      "protein": 1.9,
+      "carbs": 5,
+      "fats": 0.3,
+      "iron": 0.4,
+      "calcium": 22,
+      "fiber": 2,
+      "vitamin_b12": 0,
+      "vitamin_c": 48.2
+    },
+    "portions": [
+      {
+        "name": "1 Cup (Florets)",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "cabbage_raw",
+    "name": "Cabbage (Raw)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 25,
+      "protein": 1.3,
+      "carbs": 5.8,
+      "fats": 0.1,
+      "iron": 0.5,
+      "calcium": 40,
+      "fiber": 2.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 36.6
+    },
+    "portions": [
+      {
+        "name": "1 Cup (Shredded)",
+        "grams": 70
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "green_peas_boiled",
+    "name": "Green Peas (Boiled)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 84,
+      "protein": 5.4,
+      "carbs": 15.6,
+      "fats": 0.2,
+      "iron": 1.5,
+      "calcium": 27,
+      "fiber": 5.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 14.2
+    },
+    "portions": [
+      {
+        "name": "1 Cup",
+        "grams": 160
+      },
+      {
+        "name": "1 Small Bowl",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "okra_plain_boiled",
+    "name": "Okra / Bhindi (Boiled, Plain)",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 33,
+      "protein": 1.9,
+      "carbs": 7.5,
+      "fats": 0.2,
+      "iron": 0.6,
+      "calcium": 82,
+      "fiber": 3.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 23
+    },
+    "portions": [
+      {
+        "name": "1 Cup (Sliced)",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "paneer_tikka_grilled",
+    "name": "Paneer Tikka (Grilled Dish)",
+    "category": "Dairy & Protein",
+    "nutrition_per_100g": {
+      "calories": 260,
+      "protein": 17.5,
+      "carbs": 3.5,
+      "fats": 19.5,
+      "iron": 0.3,
+      "calcium": 450,
+      "fiber": 0.5,
+      "vitamin_b12": 0.7,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Plate (~6 cubes + veg)",
+        "grams": 180
+      },
+      {
+        "name": "1 Cube",
+        "grams": 25
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "chicken_tikka_grilled",
+    "name": "Chicken Tikka (Grilled / Boneless)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 160,
+      "protein": 24.5,
+      "carbs": 1.5,
+      "fats": 6.2,
+      "iron": 1.1,
+      "calcium": 20,
+      "fiber": 0.2,
+      "vitamin_b12": 0.35,
+      "vitamin_c": 1
+    },
+    "portions": [
+      {
+        "name": "1 Plate (~6 pieces)",
+        "grams": 150
+      },
+      {
+        "name": "1 Piece",
+        "grams": 25
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "chicken_seekh_kabab",
+    "name": "Chicken Seekh Kabab",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 180,
+      "protein": 19,
+      "carbs": 2.2,
+      "fats": 10.5,
+      "iron": 1.3,
+      "calcium": 22,
+      "fiber": 0.4,
+      "vitamin_b12": 0.4,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Seekh Kabab (Standard)",
+        "grams": 60
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "mutton_seekh_kabab",
+    "name": "Mutton Seekh Kabab",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 220,
+      "protein": 18,
+      "carbs": 2.5,
+      "fats": 15,
+      "iron": 2.1,
+      "calcium": 24,
+      "fiber": 0.4,
+      "vitamin_b12": 1.8,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Seekh Kabab (Standard)",
+        "grams": 60
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "fried_fish",
+    "name": "Fried Fish (Batter Fried)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 230,
+      "protein": 17,
+      "carbs": 8,
+      "fats": 14,
+      "iron": 0.9,
+      "calcium": 25,
+      "fiber": 0.4,
+      "vitamin_b12": 1.2,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Standard Fillet",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "steamed_fish",
+    "name": "Steamed Fish (White Fish)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 110,
+      "protein": 22,
+      "carbs": 0,
+      "fats": 2.5,
+      "iron": 0.5,
+      "calcium": 15,
+      "fiber": 0,
+      "vitamin_b12": 1.8,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Standard Fillet",
+        "grams": 120
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "egg_white_omelette",
+    "name": "Egg White Omelette (3 Eggs)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 110,
+      "protein": 15,
+      "carbs": 1.5,
+      "fats": 4.8,
+      "iron": 0.2,
+      "calcium": 12,
+      "fiber": 0.2,
+      "vitamin_b12": 0.2,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "Omelette (3 Egg Whites)",
+        "grams": 110
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "scrambled_eggs_plain",
+    "name": "Scrambled Eggs (Plain, 2 Eggs)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 165,
+      "protein": 12,
+      "carbs": 1.2,
+      "fats": 12.5,
+      "iron": 1.5,
+      "calcium": 52,
+      "fiber": 0,
+      "vitamin_b12": 1.1,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Serving (2 Eggs)",
+        "grams": 100
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "poached_egg",
+    "name": "Poached Egg",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 143,
+      "protein": 12.5,
+      "carbs": 0.7,
+      "fats": 9.5,
+      "iron": 1.2,
+      "calcium": 50,
+      "fiber": 0,
+      "vitamin_b12": 1.1,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Large Egg",
+        "grams": 50
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "fried_egg_sunny",
+    "name": "Fried Egg (Sunny Side Up)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 185,
+      "protein": 12.2,
+      "carbs": 0.8,
+      "fats": 14.5,
+      "iron": 1.2,
+      "calcium": 48,
+      "fiber": 0,
+      "vitamin_b12": 1,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Large Fried Egg",
+        "grams": 55
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "greek_salad",
+    "name": "Greek Salad (with Feta)",
+    "category": "Fruits",
+    "nutrition_per_100g": {
+      "calories": 90,
+      "protein": 2.2,
+      "carbs": 5.5,
+      "fats": 6.8,
+      "iron": 0.8,
+      "calcium": 85,
+      "fiber": 1.5,
+      "vitamin_b12": 0.15,
+      "vitamin_c": 12
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 200
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "caesar_salad_chicken",
+    "name": "Caesar Salad (with Grilled Chicken)",
+    "category": "Meats",
+    "nutrition_per_100g": {
+      "calories": 145,
+      "protein": 12.5,
+      "carbs": 4.8,
+      "fats": 8.5,
+      "iron": 1.1,
+      "calcium": 90,
+      "fiber": 1.2,
+      "vitamin_b12": 0.25,
+      "vitamin_c": 6.2
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 250
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "coleslaw_salad",
+    "name": "Coleslaw Salad",
+    "category": "Vegetables & Sabzi",
+    "nutrition_per_100g": {
+      "calories": 140,
+      "protein": 1.1,
+      "carbs": 9.5,
+      "fats": 11.2,
+      "iron": 0.3,
+      "calcium": 30,
+      "fiber": 1.8,
+      "vitamin_b12": 0,
+      "vitamin_c": 22
+    },
+    "portions": [
+      {
+        "name": "1 Bowl",
+        "grams": 150
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "hummus",
+    "name": "Hummus Dip",
+    "category": "Fats & Spreads",
+    "nutrition_per_100g": {
+      "calories": 166,
+      "protein": 7.9,
+      "carbs": 14.3,
+      "fats": 9.6,
+      "iron": 2.4,
+      "calcium": 38,
+      "fiber": 6,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 15
+      },
+      {
+        "name": "1 Bowl / Serving",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "falafel",
+    "name": "Falafel (Fried Chickpea Balls)",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 330,
+      "protein": 13.3,
+      "carbs": 31.8,
+      "fats": 17.8,
+      "iron": 3.4,
+      "calcium": 54,
+      "fiber": 4.9,
+      "vitamin_b12": 0,
+      "vitamin_c": 1.5
+    },
+    "portions": [
+      {
+        "name": "1 Patty/Ball",
+        "grams": 25
+      },
+      {
+        "name": "1 Serving (4 balls)",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pita_bread_wheat",
+    "name": "Pita Bread (Whole Wheat)",
+    "category": "Global Staples",
+    "nutrition_per_100g": {
+      "calories": 275,
+      "protein": 9,
+      "carbs": 55,
+      "fats": 1.5,
+      "iron": 2.4,
+      "calcium": 80,
+      "fiber": 6,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Pita Bread (6\" dia)",
+        "grams": 57
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "tortilla_corn",
+    "name": "Tortilla (Corn)",
+    "category": "Global Staples",
+    "nutrition_per_100g": {
+      "calories": 218,
+      "protein": 5.7,
+      "carbs": 44.5,
+      "fats": 2.8,
+      "iron": 1.2,
+      "calcium": 160,
+      "fiber": 6.3,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Tortilla (6\" dia)",
+        "grams": 28
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "tortilla_flour",
+    "name": "Tortilla (Flour)",
+    "category": "Global Staples",
+    "nutrition_per_100g": {
+      "calories": 300,
+      "protein": 8,
+      "carbs": 50,
+      "fats": 7.5,
+      "iron": 3.1,
+      "calcium": 140,
+      "fiber": 2.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Tortilla (8\" dia)",
+        "grams": 45
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "white_bread_slice",
+    "name": "White Bread (Slice)",
+    "category": "Global Staples",
+    "nutrition_per_100g": {
+      "calories": 265,
+      "protein": 8.5,
+      "carbs": 49,
+      "fats": 3.2,
+      "iron": 2.7,
+      "calcium": 140,
+      "fiber": 2.3,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Slice",
+        "grams": 25
+      },
+      {
+        "name": "2 Slices",
+        "grams": 50
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "multigrain_bread_slice",
+    "name": "Multigrain Bread (Slice)",
+    "category": "Global Staples",
+    "nutrition_per_100g": {
+      "calories": 250,
+      "protein": 11.5,
+      "carbs": 43,
+      "fats": 4,
+      "iron": 2.6,
+      "calcium": 100,
+      "fiber": 6.5,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Slice",
+        "grams": 28
+      },
+      {
+        "name": "2 Slices",
+        "grams": 56
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "garlic_bread",
+    "name": "Garlic Bread (Slice)",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 350,
+      "protein": 8.8,
+      "carbs": 45,
+      "fats": 15,
+      "iron": 2.2,
+      "calcium": 90,
+      "fiber": 2.1,
+      "vitamin_b12": 0.1,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Slice",
+        "grams": 40
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "croissant_plain",
+    "name": "Croissant (Plain Butter)",
+    "category": "Fast Food",
+    "nutrition_per_100g": {
+      "calories": 406,
+      "protein": 8.2,
+      "carbs": 45.8,
+      "fats": 21,
+      "iron": 2,
+      "calcium": 37,
+      "fiber": 2.6,
+      "vitamin_b12": 0.15,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Medium Croissant",
+        "grams": 57
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "pancake_plain",
+    "name": "Pancake (Plain)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 227,
+      "protein": 6.4,
+      "carbs": 28.3,
+      "fats": 9.7,
+      "iron": 1.8,
+      "calcium": 140,
+      "fiber": 0.8,
+      "vitamin_b12": 0.2,
+      "vitamin_c": 0.2
+    },
+    "portions": [
+      {
+        "name": "1 Medium Pancake",
+        "grams": 40
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "waffle_plain",
+    "name": "Waffle (Plain)",
+    "category": "Breakfast",
+    "nutrition_per_100g": {
+      "calories": 291,
+      "protein": 7.9,
+      "carbs": 32.9,
+      "fats": 14,
+      "iron": 2.4,
+      "calcium": 80,
+      "fiber": 1,
+      "vitamin_b12": 0.25,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Waffle (Standard)",
+        "grams": 75
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "maple_syrup",
+    "name": "Maple Syrup",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 260,
+      "protein": 0,
+      "carbs": 67,
+      "fats": 0.1,
+      "iron": 0.1,
+      "calcium": 102,
+      "fiber": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 20
+      },
+      {
+        "name": "1 Teaspoon",
+        "grams": 7
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "honey",
+    "name": "Honey (Pure)",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 304,
+      "protein": 0.3,
+      "carbs": 82.4,
+      "fats": 0,
+      "iron": 0.4,
+      "calcium": 6,
+      "fiber": 0.2,
+      "vitamin_b12": 0,
+      "vitamin_c": 0.5
+    },
+    "portions": [
+      {
+        "name": "1 Tablespoon",
+        "grams": 21
+      },
+      {
+        "name": "1 Teaspoon",
+        "grams": 7
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "jaggery",
+    "name": "Jaggery (Gur)",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 383,
+      "protein": 0.4,
+      "carbs": 95,
+      "fats": 0.1,
+      "iron": 2.6,
+      "calcium": 80,
+      "fiber": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Piece (Small)",
+        "grams": 10
+      },
+      {
+        "name": "1 Tablespoon (Grated)",
+        "grams": 15
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "sugar_white",
+    "name": "Sugar (White Granulated)",
+    "category": "Sweets",
+    "nutrition_per_100g": {
+      "calories": 387,
+      "protein": 0,
+      "carbs": 100,
+      "fats": 0,
+      "iron": 0.05,
+      "calcium": 1,
+      "fiber": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Teaspoon",
+        "grams": 4
+      },
+      {
+        "name": "1 Tablespoon",
+        "grams": 12
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "ghee",
+    "name": "Ghee (Clarified Butter)",
+    "category": "Fats & Spreads",
+    "nutrition_per_100g": {
+      "calories": 884,
+      "protein": 0,
+      "carbs": 0,
+      "fats": 99.5,
+      "iron": 0,
+      "calcium": 0,
+      "fiber": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Teaspoon",
+        "grams": 5
+      },
+      {
+        "name": "1 Tablespoon",
+        "grams": 14
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
+  },
+  {
+    "id": "coconut_oil",
+    "name": "Coconut Oil",
+    "category": "Fats & Spreads",
+    "nutrition_per_100g": {
+      "calories": 862,
+      "protein": 0,
+      "carbs": 0,
+      "fats": 100,
+      "iron": 0.05,
+      "calcium": 1,
+      "fiber": 0,
+      "vitamin_b12": 0,
+      "vitamin_c": 0
+    },
+    "portions": [
+      {
+        "name": "1 Teaspoon",
+        "grams": 5
+      },
+      {
+        "name": "1 Tablespoon",
+        "grams": 14
+      },
+      {
+        "name": "100 grams",
+        "grams": 100
+      }
+    ]
   }
 ];
 
