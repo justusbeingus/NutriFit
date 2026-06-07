@@ -16,11 +16,11 @@ export const AddMeal = ({ defaultMealType = "breakfast", onMealAdded }) => {
 
   // Suggested Quick Chips (Staples)
   const quickChips = [
-    { id: "roti", name: "Roti" },
-    { id: "rice", name: "Rice" },
-    { id: "dal", name: "Dal" },
-    { id: "paneer", name: "Paneer" },
-    { id: "chicken_breast", name: "Chicken" }
+    { id: "wheat_roti", name: "Roti" },
+    { id: "white_rice_cooked", name: "Rice" },
+    { id: "toor_dal_cooked", name: "Dal" },
+    { id: "paneer_raw", name: "Paneer" },
+    { id: "chicken_breast_cooked", name: "Chicken" }
   ];
 
   // Sync defaultMealType if changed by parent
